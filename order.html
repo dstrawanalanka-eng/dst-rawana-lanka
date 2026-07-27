@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Order Now - DST Rawana Lanka</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>DST Rawana Lanka</h1>
+</header>
+
+
+<section class="order">
+
+    <h2>Place Your Order</h2>
+
+    <form onsubmit="sendWhatsApp(); return false;">
+
+        <label>Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+
+
+        <label>Phone Number</label>
+        <input type="text" id="phone" placeholder="Enter phone number" required>
+
+
+        <label>Select Product</label>
+        <select id="product">
+
+            <option>Aloe Vera Drink</option>
+            <option>Passion Drink</option>
+            <option>Butter</option>
+            <option>Ghee</option>
+            <option>Yoghurt Drink</option>
+            <option>Jelly Yoghurt</option>
+            <option>Mango Fruit Drink</option>
+            <option>Mix Fruit Drink</option>
+            <option>Lime Drink</option>
+
+        </select>
+
+
+        <label>Quantity</label>
+        <input type="number" id="qty" placeholder="Enter quantity" required>
+
+
+        <button type="submit">
+            Submit Order
+        </button>
+
+    </form>
+
+</section>
+
+
+<footer>
+
+    <p>
+        © 2026 DST Rawana Lanka
+    </p>
+
+</footer>
+
+
+
+<script>
+
+function sendWhatsApp(){
+
+    let name = document.getElementById("name").value;
+
+    let phone = document.getElementById("phone").value;
+
+    let product = document.getElementById("product").value;
+
+    let qty = document.getElementById("qty").value;
+
+
+    let message =
+    "New Order%0A%0A" +
+    "Name: " + name + "%0A" +
+    "Phone: " + phone + "%0A" +
+    "Product: " + product + "%0A" +
+    "Quantity: " + qty;
+
+
+    window.open(
+        "https://wa.me/94714881433?text=" + message,
+        "_blank"
+    );
+
+}
+
+</script>
+
+
+</body>
+
+</html>

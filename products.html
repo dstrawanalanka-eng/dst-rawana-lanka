@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<title>Our Products</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="logo">
+
+<img src="images/logo.png" alt="DST Rawana Lanka Logo">
+
+<h1>DST Rawana Lanka</h1>
+
+</div>
+
+
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="products.html">Products</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+</header>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="products.html">Products</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+</header>
+
+
+
+<section class="products">
+
+<h2>Our Products</h2>
+
+<input 
+type="text" 
+id="searchBox" 
+placeholder="Search Products..."
+onkeyup="searchProduct()">
+
+
+<div class="product-container">
+
+
+
+<  <div class="product-container">
+
+        <div class="card">
+
+    <img src="images/yoghurt.jpg">
+
+    <h3>Set Yoghurt</h3>
+
+    <p>
+        Fresh and creamy yoghurt.
+    </p>
+
+    <p>
+        <b>Ingredients:</b><br>
+        Fresh Milk, Sugar, Gelatine,Yogurt Culture,Vanilla Flavours
+        </p><b>Net Volume:</b> 70 g   
+                 <b>Price:</b> Rs.80.00
+    </p>
+    <a href="order.html" class="order-btn">
+    Order Now
+
+    <script>
+
+function addToCart(name, price){
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+
+cart.push({
+
+name:set Yoghurt,
+price:Rs.80.00
+
+});
+
+
+localStorage.setItem("cart", JSON.stringify(cart));
+
+
+alert(set Yoghurt + " added to cart 🛒");
+
+
+}
+
+</script>
+</a>
+
+</div>
+
+
+
+       <div class="card">
+
+    <img src="images/butter.jpg">
+
+    <h3>Butter</h3>
+
+    <p>
+        Premium quality butter.
+    </p>
+
+    <p>
+        <b>Ingredients:</b><br>
+        Milk Fat,Salt
+    </p><b>Net Volume:</b> 450 g
+    <b>Price:</b> Rs.2750.00
+    <a href="order.html" class="order-btn">
+    Order Now
+</a>
+<script> 
+function addToCart(name, price){
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+
+cart.push({
+
+name:Butter,
+price:Rs.2750.00
+
+});
+
+
+localStorage.setItem("cart", JSON.stringify(cart));
+
+
+alert(Butter + " added to cart 🛒");
+
+
+}
+
+</script>
+</a>
+
+
+
+<div class="card">
+
+    <img src="images/aloe-vera.jpg">
+
+    <h3>Aloe Vera Drink</h3>
+
+    <p>
+        A refreshing and healthy aloe vera drink.
+    </p>
+    
+
+    <p>
+        <b>Ingredients:</b><br>
+        Aloe Vera pulp, Water, Sugar,Stabilizer(ins 415) Citric Acid (ins 330),Table Salt,Permited Food Preservative (ins 223),orange & lime Flavours
+    </p><b>Net Volume:</b> 200 ml   
+                 <b>Price:</b> Rs.150.00
+                 <a href="order.html" class="order-btn">
+    Order Now
+    <script>
+
+function addToCart(name, price){
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+
+cart.push({
+
+name:aloe vera Drink,
+price:Rs.150.00
+
+});
+
+
+localStorage.setItem("cart", JSON.stringify(cart));
+
+
+alert(aloe vera Drink+ " added to cart 🛒");
+
+
+}
+
+</script>
+</a>
+
+
+
+<<div class="card">
+
+    <img src="images/passion.jpg">
+
+    <h3>Passion Drink</h3>
+
+    <p>
+        A delicious and refreshing passion fruit drink.
+    </p>
+
+    <p>
+        <b>Price:</b> Rs. 150.00
+    </p>
+
+    <p>
+        <b>Net Volume:</b> 200 ml
+    </p>
+
+    <p>
+        <b>Ingredients:</b><br>
+        Passion Fruit pulp, Water, Sugar, Citric Acid, Permited food colour
+    </p>
+    <a href="order.html" class="order-btn">
+    Order Now
+    <script>
+
+function addToCart(name, price){
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+
+cart.push({
+
+name:Passion Drink,
+price:Rs.150.00
+
+});
+
+
+localStorage.setItem("cart", JSON.stringify(cart));
+
+
+alert(Passion Drink + " added to cart 🛒");
+
+
+}
+
+</script>
+</a>
+
+
+
+<div class="card">
+<img src="images/lime.jpg">
+<h3>Lime Drink</h3>
+<p>Net Volume: 200ml</p>
+<p>Price: Rs. 200.00</p>
+<p>Ingredients: Lime Juice, Water, Sugar</p>
+</div>
+<a href="order.html" class="order-btn">
+    Order Now
+<script>
+
+function addToCart(name, price){
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+
+cart.push({
+
+name:Lime Drink,
+price:Rs.150.00
+});
+
+
+localStorage.setItem("cart", JSON.stringify(cart));
+
+
+alert(Lime Drink + " added to cart 🛒");
+
+
+}
+
+</script>
+</a>
+
+
+
+<div class="card">
+<img src="images/butter.jpg">
+<h3>Butter</h3>
+<p>Net Volume: 450g</p>
+<p>Price: Rs. 2750.00</p>
+<p>Ingredients: Milk Fat, Cream, Salt</p>
+</div>
+<a href="order.html" class="order-btn">
+    Order Now
+<script>
+
+function addToCart(name, price){
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+
+cart.push({
+
+name:Butter,
+price:Rs.2750.00
+
+});
+
+
+localStorage.setItem("cart", JSON.stringify(cart));
+
+
+alert(Butter + " added to cart 🛒");
+
+
+}
+
+</script>>
+</a>
+
+
+
+<div class="card">
+<img src="images/ghee.jpg">
+<h3>Ghee</h3>
+<p>Net Volume: 500ml</p>
+<p>Price: Rs. 900.00</p>
+<p>Ingredients: Pure Milk Fat</p>
+</div>
+<a href="order.html" class="order-btn">
+    Order Now
+<script>
+
+function addToCart(name, price){
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+
+cart.push({
+
+name:Ghee,
+price:Rs.900.00
+
+});
+
+
+localStorage.setItem("cart", JSON.stringify(cart));
+
+
+alert(Ghee + " added to cart 🛒");
+
+
+}
+
+</script>
+</a>
+
+
+
+<div class="card">
+<img src="images/jelly-yoghurt.jpg">
+<h3>Jelly Yoghurt</h3>
+<p>Net Volume: 100g</p>
+<p>Price: Rs. 120.00</p>
+<p>Ingredients: Milk, Sugar, Jelly</p>
+</div>
+<a href="order.html" class="order-btn">
+    Order Now
+<script>
+
+function addToCart(name, price){
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+
+cart.push({
+
+name:Jelly Yoghurt,
+price:Rs.80.00
+
+});
+
+
+localStorage.setItem("cart", JSON.stringify(cart));
+
+
+alert(Jelly Yoghurt + " added to cart 🛒");
+
+
+}
+
+</script>
+</a>
+
+
+
+<div class="card">
+<img src="images/vanilla yoghurt-drink.jpg ">
+<h3>Yoghurt Drink</h3>
+<p>Net Volume: 200ml</p>
+<p>Price: Rs. 170.00</p>
+<p>Ingredients: Milk, Sugar, Culture</p>
+</div>
+<a href="order.html" class="order-btn">
+    Order Now
+<script>
+
+function addToCart(name, price){
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+
+cart.push({
+
+name:Vanilla Yoghurt Drink,
+price:Rs.170.00
+});
+
+
+localStorage.setItem("cart", JSON.stringify(cart));
+
+
+alert(Vanilla Yoghurt Drink  + " added to cart 🛒");
+
+
+}
+
+</script>
+</a>
+
+
+
+</div>
+
+</section>
+
+
+
+<footer>
+
+<p>
+© 2026 DST Rawana Lanka
+</p>
+
+</footer>
+
+
+</body>
+
