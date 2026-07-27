@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DST Rawana Lanka - Login</title>
+</head>
+
+<body>
+
+<h1>Login</h1>
+
+<input type="email" id="email" placeholder="Email">
+<br><br>
+
+<input type="password" id="password" placeholder="Password">
+<br><br>
+
+<button id="login">Login</button>
+
+<p id="message"></p>
+
+
+<script type="module">
+
+import { auth } from "./js/firebase.js";
+
+import { 
+signInWithEmailAndPassword 
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+
+document.getElementById("login").onclick = function(){
+
+let email = document.getElementById("email").value;
+let password = document.getElementById("password").value;
+
+
+signInWithEmailAndPassword(auth,email,password)
+
+.then((userCredential)=>{
+
+document.getElementById("message").innerHTML =
+"Login Successful! 🎉";
+
+
+})
+
+.catch((error)=>{
+
+document.getElementById("message").innerHTML =
+error.message;
+
+});
+
+
+}
+
+
+</script>
+
+</body>
+</html>
