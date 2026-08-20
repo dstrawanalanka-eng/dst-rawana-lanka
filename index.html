@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -8,15 +9,14 @@
 
 <style>
 
-/* =========================
+/* ================================
    RESET
-========================= */
+================================ */
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
 }
 
 html{
@@ -24,431 +24,711 @@ html{
 }
 
 body{
-    background:#f5f8fc;
-    color:#222;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#fffaf3;
+    color:#4b2a18;
 }
 
-/* =========================
+
+/* ================================
    HEADER
-========================= */
+================================ */
 
 header{
     position:sticky;
     top:0;
     z-index:9999;
-    background:#fff;
-    box-shadow:0 3px 15px rgba(0,0,0,0.12);
+
+    background:#ffffff;
+
+    box-shadow:
+        0 3px 15px rgba(75,42,24,0.08);
 }
 
 .navbar{
-    max-width:1250px;
+    max-width:1400px;
     margin:auto;
-    min-height:75px;
-    padding:12px 25px;
+
+    height:104px;
+
+    padding:0 40px;
 
     display:flex;
     align-items:center;
     justify-content:space-between;
-    gap:20px;
 }
+
+
+/* LOGO */
 
 .logo{
-    font-size:25px;
-    font-weight:900;
-    color:#0756a3;
-    white-space:nowrap;
+    display:flex;
+    align-items:center;
+    gap:14px;
+
+    text-decoration:none;
 }
 
-.logo span{
-    color:#e63946;
+.logo-box{
+    width:58px;
+    height:58px;
+
+    background:#4b2a18;
+    color:white;
+
+    border-radius:17px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:27px;
+    font-weight:900;
+
+    box-shadow:
+        0 8px 18px rgba(75,42,24,0.18);
 }
+
+.logo-text{
+    line-height:0.9;
+}
+
+.logo-text .dst{
+    display:block;
+
+    font-size:20px;
+    font-weight:900;
+
+    color:#3d2416;
+    letter-spacing:1px;
+}
+
+.logo-text .rawana{
+    display:inline;
+
+    font-size:22px;
+    font-weight:900;
+
+    color:#a66b2f;
+
+    letter-spacing:1px;
+}
+
+.logo-text .lanka{
+    display:inline;
+
+    font-size:22px;
+    font-weight:900;
+
+    color:#3d2416;
+
+    margin-left:5px;
+    letter-spacing:1px;
+}
+
+
+/* NAVIGATION */
 
 .nav-links{
     display:flex;
     align-items:center;
-    gap:25px;
+    gap:35px;
+
     list-style:none;
 }
 
 .nav-links a{
     text-decoration:none;
-    color:#222;
+
+    color:#4b2a18;
+
     font-weight:700;
+    font-size:15px;
+
     transition:0.3s;
 }
 
 .nav-links a:hover{
-    color:#0756a3;
+    color:#a66b2f;
 }
 
-.cart-link{
-    background:#0756a3;
+
+/* CART BUTTON */
+
+.cart-button{
+    background:#4b2a18 !important;
     color:white !important;
-    padding:11px 18px;
+
+    padding:14px 24px;
+
     border-radius:30px;
+
+    box-shadow:
+        0 7px 18px rgba(75,42,24,0.15);
 }
 
-.cart-link:hover{
-    background:#043d75;
-}
 
-/* =========================
+/* ================================
    HERO
-========================= */
+================================ */
 
 .hero{
+
     min-height:650px;
 
     display:flex;
     align-items:center;
 
     background:
+
     linear-gradient(
-        rgba(0,35,80,0.72),
-        rgba(0,35,80,0.72)
+        rgba(63,36,21,0.55),
+        rgba(63,36,21,0.55)
     ),
+
     url("images/hero.jpg");
 
     background-size:cover;
     background-position:center;
 }
 
-.hero-content{
+.hero-container{
+
     width:100%;
-    max-width:1250px;
+    max-width:1400px;
+
     margin:auto;
-    padding:40px 25px;
+
+    padding:80px 50px;
+}
+
+.hero-content{
+    max-width:720px;
+
     color:white;
 }
 
-.hero-content h1{
-    font-size:62px;
-    line-height:1.1;
-    max-width:750px;
+.hero-small{
+
+    display:inline-block;
+
+    color:#f1c58d;
+
+    font-size:15px;
     font-weight:900;
+
+    letter-spacing:5px;
+
+    margin-bottom:20px;
 }
 
-.hero-content h1 span{
-    color:#ffd43b;
+.hero h1{
+
+    font-family:Georgia, serif;
+
+    font-size:68px;
+    line-height:1.05;
+
+    margin-bottom:25px;
 }
 
-.hero-content p{
-    max-width:650px;
-    font-size:19px;
+.hero h1 span{
+    color:#f1c58d;
+}
+
+.hero p{
+
+    max-width:620px;
+
+    font-size:18px;
     line-height:1.8;
-    margin:25px 0;
+
+    color:#f8eee3;
+
+    margin-bottom:35px;
 }
 
-.buttons{
+
+/* BUTTONS */
+
+.hero-buttons{
+
     display:flex;
     gap:15px;
+
     flex-wrap:wrap;
 }
 
 .btn{
+
     display:inline-block;
-    padding:14px 28px;
+
+    padding:15px 30px;
+
     border-radius:30px;
+
     text-decoration:none;
-    font-weight:bold;
+
+    font-weight:800;
+
     transition:0.3s;
 }
 
-.btn:hover{
+.btn-brown{
+
+    background:#4b2a18;
+    color:white;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.15);
+}
+
+.btn-brown:hover{
+    transform:translateY(-3px);
+    background:#321a0e;
+}
+
+.btn-cream{
+
+    background:#f7e7d2;
+    color:#4b2a18;
+}
+
+.btn-cream:hover{
     transform:translateY(-3px);
 }
 
-.btn-yellow{
-    background:#ffd43b;
-    color:#111;
-}
 
-.btn-white{
-    background:white;
-    color:#0756a3;
-}
-
-/* =========================
-   SECTION
-========================= */
+/* ================================
+   GENERAL SECTION
+================================ */
 
 section{
-    padding:80px 20px;
+    padding:90px 25px;
+}
+
+.section-container{
+
+    max-width:1400px;
+    margin:auto;
 }
 
 .section-title{
     text-align:center;
-    margin-bottom:45px;
+
+    margin-bottom:50px;
+}
+
+.section-label{
+
+    color:#a66b2f;
+
+    font-size:14px;
+    font-weight:900;
+
+    letter-spacing:5px;
+
+    margin-bottom:12px;
 }
 
 .section-title h2{
-    color:#0756a3;
-    font-size:40px;
-    margin-bottom:10px;
+
+    font-family:Georgia, serif;
+
+    font-size:46px;
+
+    color:#4b2a18;
 }
 
 .section-title p{
-    color:#777;
-    font-size:16px;
+
+    color:#876d5b;
+
+    margin-top:12px;
 }
 
-/* =========================
-   PRODUCTS
-========================= */
 
-.products-container{
-    max-width:1250px;
-    margin:auto;
+/* ================================
+   PRODUCTS
+================================ */
+
+.products-section{
+    background:#fffaf3;
 }
 
 .product-grid{
+
     display:grid;
+
     grid-template-columns:
-        repeat(4, 1fr);
+    repeat(4,1fr);
 
     gap:25px;
 }
 
 .product-card{
-    background:#fff;
+
+    background:#ffffff;
+
+    border:1px solid #eedfce;
+
     border-radius:20px;
+
     overflow:hidden;
 
     box-shadow:
-        0 5px 20px rgba(0,0,0,0.08);
+        0 8px 25px rgba(75,42,24,0.06);
 
     transition:0.3s;
 }
 
 .product-card:hover{
-    transform:translateY(-8px);
+
+    transform:translateY(-7px);
 
     box-shadow:
-        0 15px 35px rgba(0,0,0,0.15);
+        0 15px 35px rgba(75,42,24,0.13);
 }
 
 .product-image{
+
     width:100%;
-    height:220px;
+    height:245px;
+
     object-fit:cover;
+
     display:block;
+
+    background:#f1e4d4;
 }
 
 .product-info{
-    padding:20px;
+    padding:22px;
 }
 
 .product-info h3{
-    font-size:21px;
+
+    font-family:Georgia, serif;
+
+    font-size:22px;
+
+    color:#4b2a18;
+
     margin-bottom:8px;
 }
 
 .product-info p{
-    color:#777;
+
+    color:#927c6b;
+
+    font-size:14px;
+
     line-height:1.5;
-    min-height:45px;
+
+    min-height:42px;
 }
 
 .price{
-    color:#e63946;
-    font-size:22px;
+
+    color:#a66b2f;
+
+    font-size:20px;
+
     font-weight:900;
-    margin:15px 0;
+
+    margin:16px 0;
 }
 
 .add-cart{
-    width:100%;
-    border:none;
-    padding:13px;
-    border-radius:30px;
 
-    background:#0756a3;
+    width:100%;
+
+    border:none;
+
+    background:#4b2a18;
+
     color:white;
 
-    font-size:15px;
-    font-weight:bold;
+    padding:13px;
+
+    border-radius:25px;
+
+    font-weight:800;
 
     cursor:pointer;
+
     transition:0.3s;
 }
 
 .add-cart:hover{
-    background:#043d75;
-    transform:scale(1.02);
+
+    background:#2f190d;
+
+    transform:translateY(-2px);
 }
 
-/* =========================
+
+/* ================================
    ABOUT
-========================= */
+================================ */
 
-.about{
-    background:white;
+.about-section{
+
+    background:#f3e5d4;
 }
 
-.about-container{
-    max-width:1250px;
+.about-grid{
+
+    max-width:1400px;
+
     margin:auto;
 
     display:grid;
-    grid-template-columns:
-        1fr 1fr;
 
-    gap:50px;
+    grid-template-columns:1fr 1fr;
+
+    gap:60px;
+
     align-items:center;
 }
 
 .about-image{
+
     width:100%;
-    height:430px;
+    height:450px;
+
     object-fit:cover;
+
     border-radius:25px;
+
+    box-shadow:
+        0 15px 35px rgba(75,42,24,0.12);
 }
 
-.about-text h2{
-    color:#0756a3;
-    font-size:42px;
-    margin-bottom:20px;
+.about-content .section-label{
+
+    display:block;
 }
 
-.about-text p{
-    color:#666;
-    line-height:1.8;
-    margin-bottom:15px;
+.about-content h2{
+
+    font-family:Georgia, serif;
+
+    font-size:48px;
+
+    color:#4b2a18;
+
+    margin-bottom:25px;
 }
 
-/* =========================
+.about-content p{
+
+    color:#705b4b;
+
+    line-height:1.9;
+
+    margin-bottom:18px;
+
+    font-size:16px;
+}
+
+
+/* ================================
    FEATURES
-========================= */
+================================ */
 
-.features-container{
-    max-width:1250px;
-    margin:auto;
+.features{
 
     display:grid;
+
     grid-template-columns:
-        repeat(3,1fr);
+    repeat(3,1fr);
 
     gap:25px;
 }
 
-.feature-card{
-    background:white;
-    padding:35px 25px;
-    text-align:center;
+.feature{
+
+    background:#ffffff;
+
+    border:1px solid #eedfce;
 
     border-radius:20px;
 
+    padding:40px 25px;
+
+    text-align:center;
+
     box-shadow:
-        0 5px 20px rgba(0,0,0,0.08);
+        0 7px 22px rgba(75,42,24,0.06);
 }
 
 .feature-icon{
-    font-size:48px;
-    margin-bottom:15px;
+
+    width:70px;
+    height:70px;
+
+    margin:0 auto 20px;
+
+    background:#f3e5d4;
+
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:32px;
 }
 
-.feature-card h3{
-    color:#0756a3;
-    margin-bottom:10px;
+.feature h3{
+
+    font-family:Georgia, serif;
+
+    font-size:23px;
+
+    margin-bottom:12px;
 }
 
-.feature-card p{
-    color:#777;
+.feature p{
+
+    color:#927c6b;
+
     line-height:1.6;
 }
 
-/* =========================
-   GALLERY
-========================= */
 
-.gallery-container{
-    max-width:1250px;
-    margin:auto;
+/* ================================
+   GALLERY
+================================ */
+
+.gallery-section{
+
+    background:#fffaf3;
 }
 
 .gallery-grid{
+
     display:grid;
+
     grid-template-columns:
-        repeat(3,1fr);
+    repeat(3,1fr);
 
     gap:20px;
 }
 
 .gallery-grid img{
+
     width:100%;
     height:270px;
+
     object-fit:cover;
+
     border-radius:20px;
+
     transition:0.3s;
+
+    background:#f1e4d4;
 }
 
 .gallery-grid img:hover{
-    transform:scale(1.03);
+
+    transform:scale(1.025);
 }
 
-/* =========================
+
+/* ================================
    CTA
-========================= */
+================================ */
 
 .cta{
-    background:
-    linear-gradient(
-        135deg,
-        #0756a3,
-        #003566
-    );
+
+    background:#4b2a18;
+
+    color:white;
 
     text-align:center;
-    color:white;
 }
 
 .cta h2{
-    font-size:42px;
+
+    font-family:Georgia, serif;
+
+    font-size:48px;
+
     margin-bottom:15px;
 }
 
 .cta p{
-    font-size:18px;
-    margin-bottom:25px;
+
+    color:#eadbca;
+
+    font-size:17px;
+
+    margin-bottom:30px;
 }
 
-/* =========================
+.cta .btn-brown{
+
+    background:#f1c58d;
+    color:#4b2a18;
+}
+
+
+/* ================================
    FOOTER
-========================= */
+================================ */
 
 footer{
-    background:#111827;
+
+    background:#29160d;
+
     color:white;
-    padding:55px 20px 20px;
+
+    padding:60px 25px 20px;
 }
 
 .footer-container{
-    max-width:1250px;
+
+    max-width:1400px;
+
     margin:auto;
 
     display:grid;
-    grid-template-columns:
-        2fr 1fr 1fr;
 
-    gap:40px;
+    grid-template-columns:
+    2fr 1fr 1fr;
+
+    gap:50px;
 }
 
 .footer-box h3{
-    color:#ffd43b;
+
+    font-family:Georgia, serif;
+
+    color:#f1c58d;
+
     margin-bottom:18px;
 }
 
 .footer-box p{
-    color:#aaa;
+
+    color:#cbb8a7;
+
     line-height:1.7;
-    margin-bottom:8px;
 }
 
 .footer-box a{
+
     display:block;
-    color:#aaa;
+
+    color:#cbb8a7;
+
     text-decoration:none;
-    margin-bottom:10px;
+
+    margin-bottom:11px;
+
+    transition:0.3s;
 }
 
 .footer-box a:hover{
@@ -456,56 +736,77 @@ footer{
 }
 
 .copyright{
-    text-align:center;
 
-    border-top:
-        1px solid #333;
+    max-width:1400px;
 
-    margin-top:40px;
+    margin:40px auto 0;
+
     padding-top:20px;
 
-    color:#777;
+    border-top:1px solid #4c3325;
+
+    text-align:center;
+
+    color:#927c6b;
+
+    font-size:14px;
 }
 
-/* =========================
-   MOBILE
-========================= */
 
-@media(max-width:1000px){
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media(max-width:1050px){
+
+    .nav-links{
+        gap:15px;
+    }
 
     .product-grid{
         grid-template-columns:
-            repeat(2,1fr);
+        repeat(2,1fr);
     }
 
-    .hero-content h1{
-        font-size:50px;
+    .hero h1{
+        font-size:55px;
     }
 
 }
 
-@media(max-width:700px){
+@media(max-width:750px){
 
     .navbar{
+
+        height:auto;
+
+        padding:18px;
+
         flex-direction:column;
-        padding:15px;
     }
 
     .nav-links{
-        gap:12px;
+
         flex-wrap:wrap;
+
         justify-content:center;
+
+        gap:13px;
     }
 
     .hero{
-        min-height:580px;
+        min-height:600px;
     }
 
-    .hero-content h1{
-        font-size:40px;
+    .hero-container{
+        padding:60px 25px;
     }
 
-    .hero-content p{
+    .hero h1{
+        font-size:42px;
+    }
+
+    .hero p{
         font-size:16px;
     }
 
@@ -513,11 +814,15 @@ footer{
         grid-template-columns:1fr;
     }
 
-    .about-container{
+    .about-grid{
         grid-template-columns:1fr;
     }
 
-    .features-container{
+    .about-image{
+        height:320px;
+    }
+
+    .features{
         grid-template-columns:1fr;
     }
 
@@ -532,23 +837,46 @@ footer{
 }
 
 </style>
+
 </head>
 
 
 <body>
 
 
-<!-- ==================================================
-     NAVIGATION
-================================================== -->
+<!-- =========================================
+     HEADER
+========================================= -->
 
 <header>
 
 <nav class="navbar">
 
-<div class="logo">
-DST <span>RAWANA</span> LANKA
+
+<a href="index.html" class="logo">
+
+<div class="logo-box">
+D
 </div>
+
+<div class="logo-text">
+
+<span class="dst">
+DST
+</span>
+
+<span class="rawana">
+RAWANA
+</span>
+
+<span class="lanka">
+LANKA
+</span>
+
+</div>
+
+</a>
+
 
 <ul class="nav-links">
 
@@ -583,12 +911,8 @@ Order
 </li>
 
 <li>
-<a href="cart.html"
-   class="cart-link">
-
-🛒 Cart
-<span id="cartCount">0</span>
-
+<a href="cart.html" class="cart-button">
+🛒 Cart <span id="cartCount">0</span>
 </a>
 </li>
 
@@ -599,41 +923,55 @@ Order
 </header>
 
 
-<!-- ==================================================
+<!-- =========================================
      HERO
-================================================== -->
+========================================= -->
 
 <section class="hero" id="home">
 
+<div class="hero-container">
+
 <div class="hero-content">
+
+<span class="hero-small">
+DST RAWANA LANKA
+</span>
 
 <h1>
 
-Fresh & Delicious
-<span>Products</span>
-From Sri Lanka
+Pure Taste.
+<br>
+
+<span>Fresh Quality.</span>
+
+<br>
+
+Made for You.
 
 </h1>
 
 <p>
 
-Welcome to DST RAWANA LANKA.
-Discover our fresh, delicious and quality
-food & beverage products made for your family.
+Discover delicious and quality products
+from DST RAWANA LANKA. Freshness,
+great taste and quality in every product.
 
 </p>
 
-<div class="buttons">
 
-<a href="#products"
-   class="btn btn-yellow">
+<div class="hero-buttons">
+
+<a
+href="#products"
+class="btn btn-cream">
 
 Explore Products
 
 </a>
 
-<a href="order.html"
-   class="btn btn-white">
+<a
+href="order.html"
+class="btn btn-brown">
 
 Order Now
 
@@ -643,25 +981,34 @@ Order Now
 
 </div>
 
+</div>
+
 </section>
 
 
-<!-- ==================================================
+<!-- =========================================
      PRODUCTS
-================================================== -->
+========================================= -->
 
-<section id="products">
+<section
+class="products-section"
+id="products">
 
-<div class="products-container">
+<div class="section-container">
+
 
 <div class="section-title">
+
+<div class="section-label">
+OUR COLLECTION
+</div>
 
 <h2>
 Our Products
 </h2>
 
 <p>
-Fresh products made with quality ingredients
+Quality products made with care
 </p>
 
 </div>
@@ -670,7 +1017,7 @@ Fresh products made with quality ingredients
 <div class="product-grid">
 
 
-<!-- PRODUCT 01 -->
+<!-- YOGHURT -->
 
 <div class="product-card">
 
@@ -687,7 +1034,7 @@ Yoghurt
 </h3>
 
 <p>
-Creamy and delicious yoghurt.
+Creamy, fresh and delicious yoghurt.
 </p>
 
 <div class="price">
@@ -696,13 +1043,7 @@ Rs. 170.00
 
 <button
 class="add-cart"
-onclick="
-addToCart(
-'Yoghurt',
-170,
-'images/yoghurt.jpg'
-)
-">
+onclick="addToCart('Yoghurt',170,'images/yoghurt.jpg')">
 
 🛒 Add to Cart
 
@@ -713,7 +1054,7 @@ addToCart(
 </div>
 
 
-<!-- PRODUCT 02 -->
+<!-- FRUIT DRINK -->
 
 <div class="product-card">
 
@@ -730,7 +1071,7 @@ Fruit Drink
 </h3>
 
 <p>
-Refreshing and delicious fruit drink.
+Refreshing fruit drink for every moment.
 </p>
 
 <div class="price">
@@ -739,13 +1080,7 @@ Rs. 250.00
 
 <button
 class="add-cart"
-onclick="
-addToCart(
-'Fruit Drink',
-250,
-'images/fruit-drink.jpg'
-)
-">
+onclick="addToCart('Fruit Drink',250,'images/fruit-drink.jpg')">
 
 🛒 Add to Cart
 
@@ -756,7 +1091,7 @@ addToCart(
 </div>
 
 
-<!-- PRODUCT 03 -->
+<!-- BUTTER -->
 
 <div class="product-card">
 
@@ -782,13 +1117,7 @@ Rs. 750.00
 
 <button
 class="add-cart"
-onclick="
-addToCart(
-'Butter',
-750,
-'images/butter.jpg'
-)
-">
+onclick="addToCart('Butter',750,'images/butter.jpg')">
 
 🛒 Add to Cart
 
@@ -799,7 +1128,7 @@ addToCart(
 </div>
 
 
-<!-- PRODUCT 04 -->
+<!-- GHEE -->
 
 <div class="product-card">
 
@@ -825,13 +1154,7 @@ Rs. 950.00
 
 <button
 class="add-cart"
-onclick="
-addToCart(
-'Ghee',
-950,
-'images/ghee.jpg'
-)
-">
+onclick="addToCart('Ghee',950,'images/ghee.jpg')">
 
 🛒 Add to Cart
 
@@ -842,7 +1165,7 @@ addToCart(
 </div>
 
 
-<!-- PRODUCT 05 -->
+<!-- JELLY YOGHURT -->
 
 <div class="product-card">
 
@@ -868,13 +1191,7 @@ Rs. 180.00
 
 <button
 class="add-cart"
-onclick="
-addToCart(
-'Jelly Yoghurt',
-180,
-'images/jelly-yoghurt.jpg'
-)
-">
+onclick="addToCart('Jelly Yoghurt',180,'images/jelly-yoghurt.jpg')">
 
 🛒 Add to Cart
 
@@ -885,7 +1202,7 @@ addToCart(
 </div>
 
 
-<!-- PRODUCT 06 -->
+<!-- ALOE VERA -->
 
 <div class="product-card">
 
@@ -911,13 +1228,7 @@ Rs. 220.00
 
 <button
 class="add-cart"
-onclick="
-addToCart(
-'Aloe Vera Drink',
-220,
-'images/aloe-vera.jpg'
-)
-">
+onclick="addToCart('Aloe Vera Drink',220,'images/aloe-vera.jpg')">
 
 🛒 Add to Cart
 
@@ -928,7 +1239,7 @@ addToCart(
 </div>
 
 
-<!-- PRODUCT 07 -->
+<!-- PASSION -->
 
 <div class="product-card">
 
@@ -954,13 +1265,7 @@ Rs. 220.00
 
 <button
 class="add-cart"
-onclick="
-addToCart(
-'Passion Drink',
-220,
-'images/passion.jpg'
-)
-">
+onclick="addToCart('Passion Drink',220,'images/passion.jpg')">
 
 🛒 Add to Cart
 
@@ -971,7 +1276,7 @@ addToCart(
 </div>
 
 
-<!-- PRODUCT 08 -->
+<!-- MANGO -->
 
 <div class="product-card">
 
@@ -997,13 +1302,7 @@ Rs. 220.00
 
 <button
 class="add-cart"
-onclick="
-addToCart(
-'Mango Fruit Drink',
-220,
-'images/mango.jpg'
-)
-">
+onclick="addToCart('Mango Fruit Drink',220,'images/mango.jpg')">
 
 🛒 Add to Cart
 
@@ -1014,7 +1313,7 @@ addToCart(
 </div>
 
 
-<!-- PRODUCT 09 -->
+<!-- LIME -->
 
 <div class="product-card">
 
@@ -1040,13 +1339,7 @@ Rs. 200.00
 
 <button
 class="add-cart"
-onclick="
-addToCart(
-'Lime Drink',
-200,
-'images/lime.jpg'
-)
-">
+onclick="addToCart('Lime Drink',200,'images/lime.jpg')">
 
 🛒 Add to Cart
 
@@ -1057,7 +1350,7 @@ addToCart(
 </div>
 
 
-<!-- PRODUCT 10 -->
+<!-- MIX FRUIT -->
 
 <div class="product-card">
 
@@ -1074,7 +1367,7 @@ Mix Fruit Drink
 </h3>
 
 <p>
-A delicious blend of fruits.
+A delicious blend of fresh fruits.
 </p>
 
 <div class="price">
@@ -1083,13 +1376,7 @@ Rs. 250.00
 
 <button
 class="add-cart"
-onclick="
-addToCart(
-'Mix Fruit Drink',
-250,
-'images/mix-fruit.jpg'
-)
-">
+onclick="addToCart('Mix Fruit Drink',250,'images/mix-fruit.jpg')">
 
 🛒 Add to Cart
 
@@ -1107,16 +1394,16 @@ addToCart(
 </section>
 
 
-<!-- ==================================================
+<!-- =========================================
      ABOUT
-================================================== -->
+========================================= -->
 
 <section
-id="about"
-class="about"
->
+class="about-section"
+id="about">
 
-<div class="about-container">
+<div class="about-grid">
+
 
 <img
 src="images/about.jpg"
@@ -1124,33 +1411,37 @@ alt="DST Rawana Lanka"
 class="about-image"
 >
 
-<div class="about-text">
+
+<div class="about-content">
+
+<span class="section-label">
+OUR STORY
+</span>
 
 <h2>
-About DST RAWANA LANKA
+Quality You Can Taste
 </h2>
 
 <p>
 
-DST RAWANA LANKA is focused on bringing
-quality, fresh and delicious food and beverage
-products to our customers.
+At DST RAWANA LANKA, we believe that
+great products begin with quality.
 
 </p>
 
 <p>
 
-We believe in quality, freshness and
-customer satisfaction.
+Our goal is to provide delicious,
+fresh and quality products that our
+customers can enjoy every day.
 
 </p>
 
 <a
 href="about.html"
-class="btn btn-yellow"
->
+class="btn btn-brown">
 
-Learn More
+Discover More
 
 </a>
 
@@ -1161,29 +1452,31 @@ Learn More
 </section>
 
 
-<!-- ==================================================
+<!-- =========================================
      FEATURES
-================================================== -->
+========================================= -->
 
 <section>
 
+<div class="section-container">
+
 <div class="section-title">
+
+<div class="section-label">
+WHY US
+</div>
 
 <h2>
 Why Choose Us?
 </h2>
 
-<p>
-Quality you can trust
-</p>
-
 </div>
 
 
-<div class="features-container">
+<div class="features">
 
 
-<div class="feature-card">
+<div class="feature">
 
 <div class="feature-icon">
 🥛
@@ -1195,31 +1488,31 @@ Fresh Products
 
 <p>
 Fresh and delicious products
-for your family.
+made with care.
 </p>
 
 </div>
 
 
-<div class="feature-card">
+<div class="feature">
 
 <div class="feature-icon">
 ⭐
 </div>
 
 <h3>
-High Quality
+Premium Quality
 </h3>
 
 <p>
-Quality ingredients and
-careful production.
+We focus on quality and
+great taste.
 </p>
 
 </div>
 
 
-<div class="feature-card">
+<div class="feature">
 
 <div class="feature-icon">
 🚚
@@ -1230,35 +1523,40 @@ Easy Ordering
 </h3>
 
 <p>
-Order your favourite products
-easily.
+Choose your products and
+order easily.
 </p>
 
 </div>
 
+
+</div>
 
 </div>
 
 </section>
 
 
-<!-- ==================================================
+<!-- =========================================
      GALLERY
-================================================== -->
+========================================= -->
 
-<section id="gallery">
+<section
+class="gallery-section"
+id="gallery">
 
-<div class="gallery-container">
+<div class="section-container">
+
 
 <div class="section-title">
 
-<h2>
-Our Gallery
-</h2>
+<div class="section-label">
+OUR GALLERY
+</div>
 
-<p>
-See our products
-</p>
+<h2>
+Discover Our Products
+</h2>
 
 </div>
 
@@ -1267,32 +1565,32 @@ See our products
 
 <img
 src="images/gallery1.jpg"
-alt="Gallery 1"
+alt="DST Rawana Lanka Gallery"
 >
 
 <img
 src="images/gallery2.jpg"
-alt="Gallery 2"
+alt="DST Rawana Lanka Gallery"
 >
 
 <img
 src="images/gallery3.jpg"
-alt="Gallery 3"
+alt="DST Rawana Lanka Gallery"
 >
 
 <img
 src="images/gallery4.jpg"
-alt="Gallery 4"
+alt="DST Rawana Lanka Gallery"
 >
 
 <img
 src="images/gallery5.jpg"
-alt="Gallery 5"
+alt="DST Rawana Lanka Gallery"
 >
 
 <img
 src="images/gallery6.jpg"
-alt="Gallery 6"
+alt="DST Rawana Lanka Gallery"
 >
 
 </div>
@@ -1302,36 +1600,37 @@ alt="Gallery 6"
 </section>
 
 
-<!-- ==================================================
-     ORDER CTA
-================================================== -->
+<!-- =========================================
+     CTA
+========================================= -->
 
 <section class="cta">
 
+<div class="section-container">
+
 <h2>
-Ready to Order?
+Ready to Shop?
 </h2>
 
 <p>
-Choose your favourite products and
-place your order today.
+Choose your favourite products
+and place your order today.
 </p>
-
-<div class="buttons"
-style="justify-content:center;">
-
-<a
-href="order.html"
-class="btn btn-yellow"
->
-Order Now
-</a>
 
 <a
 href="cart.html"
-class="btn btn-white"
->
-View Cart
+class="btn btn-brown">
+
+🛒 View My Cart
+
+</a>
+
+<a
+href="order.html"
+class="btn btn-cream">
+
+Order Now
+
 </a>
 
 </div>
@@ -1339,9 +1638,9 @@ View Cart
 </section>
 
 
-<!-- ==================================================
+<!-- =========================================
      FOOTER
-================================================== -->
+========================================= -->
 
 <footer>
 
@@ -1357,8 +1656,7 @@ DST RAWANA LANKA
 <p>
 
 Fresh, delicious and quality
-food & beverage products
-from Sri Lanka.
+products made for you.
 
 </p>
 
@@ -1428,9 +1726,9 @@ All Rights Reserved.
 </footer>
 
 
-<!-- ==================================================
+<!-- =========================================
      CART JAVASCRIPT
-================================================== -->
+========================================= -->
 
 <script>
 
@@ -1440,23 +1738,22 @@ localStorage.getItem("cart")
 ) || [];
 
 
-/* ADD PRODUCT TO CART */
-
 function addToCart(
     name,
     price,
     image
 ){
 
-    let existingProduct =
+    let existing =
     cart.find(
-        item => item.name === name
+        item =>
+        item.name === name
     );
 
 
-    if(existingProduct){
+    if(existing){
 
-        existingProduct.quantity++;
+        existing.quantity++;
 
     }
 
@@ -1465,11 +1762,8 @@ function addToCart(
         cart.push({
 
             name:name,
-
             price:price,
-
             image:image,
-
             quantity:1
 
         });
@@ -1487,7 +1781,7 @@ function addToCart(
 
 
     alert(
-        "✅ " +
+        "✓ " +
         name +
         " added to cart!"
     );
@@ -1495,40 +1789,36 @@ function addToCart(
 }
 
 
-/* UPDATE CART NUMBER */
-
 function updateCartCount(){
 
-    let totalItems = 0;
+    let count = 0;
 
 
     cart.forEach(
         item => {
 
-            totalItems +=
+            count +=
             item.quantity;
 
         }
     );
 
 
-    let count =
+    let cartCount =
     document.getElementById(
         "cartCount"
     );
 
 
-    if(count){
+    if(cartCount){
 
-        count.innerText =
-        totalItems;
+        cartCount.innerText =
+        count;
 
     }
 
 }
 
-
-/* LOAD CART COUNT */
 
 updateCartCount();
 
