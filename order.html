@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Order | DST RAWANA LANKA</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f4f8fc;
+    color:#222;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    background:#071a3d;
+    padding:20px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 3px 15px rgba(0,0,0,.2);
+}
+
+.logo{
+    color:white;
+    font-size:25px;
+    font-weight:bold;
+}
+
+nav{
+    display:flex;
+    gap:25px;
+    align-items:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#ffd21c;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:330px;
+
+    background:
+    linear-gradient(rgba(7,26,61,.82),rgba(7,26,61,.82)),
+    url("images/order.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+.hero h1{
+    color:white;
+    font-size:55px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    color:white;
+    font-size:19px;
+}
+
+/* ================= ORDER SECTION ================= */
+
+.order-section{
+    padding:70px 20px;
+}
+
+.order-box{
+    max-width:650px;
+    margin:auto;
+    background:white;
+    padding:40px;
+    border-radius:20px;
+
+    box-shadow:
+    0 10px 35px rgba(0,0,0,.12);
+}
+
+.order-box h2{
+    text-align:center;
+    color:#071a3d;
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+.order-description{
+    text-align:center;
+    color:#777;
+    margin-bottom:30px;
+}
+
+/* ================= FORM ================= */
+
+.form-group{
+    margin-bottom:20px;
+}
+
+.form-group label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:bold;
+    color:#071a3d;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+
+    width:100%;
+
+    padding:14px;
+
+    border:1px solid #d5dbe5;
+
+    border-radius:9px;
+
+    outline:none;
+
+    font-size:16px;
+
+    transition:.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+
+    border-color:#0b63ce;
+
+    box-shadow:
+    0 0 0 3px rgba(11,99,206,.1);
+}
+
+.form-group textarea{
+    min-height:100px;
+    resize:vertical;
+}
+
+/* ================= QUANTITY ================= */
+
+.quantity-box{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.quantity-box input{
+    text-align:center;
+}
+
+/* ================= BUTTON ================= */
+
+.order-button{
+
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#0b63ce;
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    margin-top:10px;
+}
+
+.order-button:hover{
+
+    background:#084c9e;
+
+    transform:translateY(-2px);
+
+}
+
+/* ================= WHATSAPP ================= */
+
+.whatsapp-note{
+
+    text-align:center;
+
+    margin-top:18px;
+
+    color:#777;
+
+    font-size:14px;
+
+}
+
+.whatsapp-note strong{
+    color:#159447;
+}
+
+/* ================= INFO CARDS ================= */
+
+.order-info{
+
+    max-width:1000px;
+
+    margin:50px auto 0;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:20px;
+}
+
+.info-card{
+
+    background:white;
+
+    padding:25px;
+
+    text-align:center;
+
+    border-radius:15px;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,.08);
+
+}
+
+.info-icon{
+
+    font-size:40px;
+
+    margin-bottom:12px;
+
+}
+
+.info-card h3{
+
+    color:#071a3d;
+
+    margin-bottom:8px;
+
+}
+
+.info-card p{
+
+    color:#777;
+
+    line-height:1.5;
+
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+
+    background:#050f25;
+
+    color:white;
+
+    text-align:center;
+
+    padding:30px 20px;
+
+    margin-top:50px;
+
+}
+
+footer p{
+    margin:7px;
+    color:#ccc;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:800px){
+
+header{
+    flex-direction:column;
+    gap:15px;
+}
+
+nav{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+
+.hero h1{
+    font-size:40px;
+}
+
+.order-info{
+    grid-template-columns:1fr;
+}
+
+}
+
+@media(max-width:500px){
+
+.order-box{
+    padding:25px 20px;
+}
+
+.hero{
+    min-height:280px;
+}
+
+.hero h1{
+    font-size:35px;
+}
+
+.order-box h2{
+    font-size:27px;
+}
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+<div class="logo">
+DST RAWANA LANKA
+</div>
+
+<nav>
+
+<a href="index.html">HOME</a>
+
+<a href="products.html">PRODUCTS</a>
+
+<a href="about.html">ABOUT</a>
+
+<a href="order.html">ORDER</a>
+
+<a href="cart.html">CART 🛒</a>
+
+</nav>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+<div>
+
+<h1>Place Your Order</h1>
+
+<p>
+Fresh & Quality Products from DST RAWANA LANKA
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ================= ORDER FORM ================= -->
+
+<section class="order-section">
+
+
+<div class="order-box">
+
+<h2>Order Now</h2>
+
+<p class="order-description">
+
+Fill in your details and send your order directly to us.
+
+</p>
+
+
+<form onsubmit="sendOrder(event)">
+
+
+<!-- NAME -->
+
+<div class="form-group">
+
+<label for="name">
+👤 Your Name
+</label>
+
+<input
+type="text"
+id="name"
+placeholder="Enter your name"
+required
+>
+
+</div>
+
+
+<!-- PHONE -->
+
+<div class="form-group">
+
+<label for="phone">
+📞 Phone Number
+</label>
+
+<input
+type="tel"
+id="phone"
+placeholder="Enter your phone number"
+required
+>
+
+</div>
+
+
+<!-- PRODUCT -->
+
+<div class="form-group">
+
+<label for="product">
+🥛 Select Product
+</label>
+
+<select id="product" required>
+
+<option value="">
+-- Select Product --
+</option>
+
+<option value="Yoghurt - Rs. 170.00">
+Yoghurt - Rs. 170.00
+</option>
+
+<option value="Fruit Drink - Rs. 250.00">
+Fruit Drink - Rs. 250.00
+</option>
+
+<option value="Butter - Rs. 750.00">
+Butter - Rs. 750.00
+</option>
+
+<option value="Ghee - Rs. 950.00">
+Ghee - Rs. 950.00
+</option>
+
+<option value="Jelly Yoghurt - Rs. 180.00">
+Jelly Yoghurt - Rs. 180.00
+</option>
+
+<option value="Aloe Vera Drink - Rs. 220.00">
+Aloe Vera Drink - Rs. 220.00
+</option>
+
+<option value="Passion Drink - Rs. 220.00">
+Passion Drink - Rs. 220.00
+</option>
+
+<option value="Mango Fruit Drink - Rs. 220.00">
+Mango Fruit Drink - Rs. 220.00
+</option>
+
+<option value="Lime Drink - Rs. 200.00">
+Lime Drink - Rs. 200.00
+</option>
+
+<option value="Mix Fruit Drink - Rs. 250.00">
+Mix Fruit Drink - Rs. 250.00
+</option>
+
+</select>
+
+</div>
+
+
+<!-- QUANTITY -->
+
+<div class="form-group">
+
+<label for="quantity">
+🔢 Quantity
+</label>
+
+<input
+type="number"
+id="quantity"
+min="1"
+value="1"
+required
+>
+
+</div>
+
+
+<!-- ADDRESS -->
+
+<div class="form-group">
+
+<label for="address">
+📍 Delivery Address
+</label>
+
+<textarea
+id="address"
+placeholder="Enter your delivery address"
+required
+></textarea>
+
+</div>
+
+
+<!-- NOTE -->
+
+<div class="form-group">
+
+<label for="note">
+📝 Additional Note
+</label>
+
+<textarea
+id="note"
+placeholder="Any special request? (Optional)"
+></textarea>
+
+</div>
+
+
+<!-- BUTTON -->
+
+<button
+type="submit"
+class="order-button"
+>
+
+📲 ORDER VIA WHATSAPP
+
+</button>
+
+
+<p class="whatsapp-note">
+
+Your order will open in
+<strong>WhatsApp</strong>.
+
+</p>
+
+
+</form>
+
+</div>
+
+
+<!-- ================= INFO ================= -->
+
+<div class="order-info">
+
+
+<div class="info-card">
+
+<div class="info-icon">
+🚚
+</div>
+
+<h3>Fast Delivery</h3>
+
+<p>
+We aim to provide convenient delivery
+for your order.
+</p>
+
+</div>
+
+
+<div class="info-card">
+
+<div class="info-icon">
+🥛
+</div>
+
+<h3>Quality Products</h3>
+
+<p>
+Enjoy our range of delicious and
+quality products.
+</p>
+
+</div>
+
+
+<div class="info-card">
+
+<div class="info-icon">
+📱
+</div>
+
+<h3>Easy Ordering</h3>
+
+<p>
+Send your order directly through
+WhatsApp.
+</p>
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<p>
+<strong>DST RAWANA LANKA</strong>
+</p>
+
+<p>
+Fresh • Quality • Delicious
+</p>
+
+<p>
+© 2026 DST RAWANA LANKA. All Rights Reserved.
+</p>
+
+</footer>
+
+
+<script>
+
+function sendOrder(event){
+
+    event.preventDefault();
+
+
+    let name =
+    document.getElementById("name").value;
+
+    let phone =
+    document.getElementById("phone").value;
+
+    let product =
+    document.getElementById("product").value;
+
+    let quantity =
+    document.getElementById("quantity").value;
+
+    let address =
+    document.getElementById("address").value;
+
+    let note =
+    document.getElementById("note").value;
+
+
+    let message =
+`🌿 DST RAWANA LANKA ORDER 🌿
+
+👤 Customer Name:
+${name}
+
+📞 Phone:
+${phone}
+
+🥛 Product:
+${product}
+
+🔢 Quantity:
+${quantity}
+
+📍 Delivery Address:
+${address}
+
+📝 Additional Note:
+${note || "None"}
+
+Thank you for ordering from DST RAWANA LANKA!`;
+
+
+    let whatsappNumber =
+    "94714881433";
+
+
+    let whatsappURL =
+    "https://wa.me/" +
+    whatsappNumber +
+    "?text=" +
+    encodeURIComponent(message);
+
+
+    window.open(
+        whatsappURL,
+        "_blank"
+    );
+
+}
+
+</script>
+
+
+</body>
+
+</html>

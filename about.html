@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About Us | DST RAWANA LANKA</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f5f8fc;
+    color:#222;
+}
+
+/* HEADER */
+
+header{
+    background:#071a3d;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    color:white;
+    font-size:25px;
+    font-weight:bold;
+}
+
+nav{
+    display:flex;
+    gap:25px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#ffd21c;
+}
+
+/* HERO */
+
+.hero{
+    min-height:400px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:60px 20px;
+
+    background:
+    linear-gradient(rgba(0,20,60,.75),rgba(0,20,60,.75)),
+    url("images/about.jpg");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero h1{
+    color:white;
+    font-size:55px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    color:white;
+    font-size:20px;
+}
+
+/* ABOUT */
+
+.about{
+    max-width:1100px;
+    margin:auto;
+    padding:70px 25px;
+}
+
+.about h2{
+    text-align:center;
+    color:#071a3d;
+    font-size:38px;
+    margin-bottom:20px;
+}
+
+.about-intro{
+    text-align:center;
+    max-width:800px;
+    margin:auto;
+    color:#666;
+    font-size:18px;
+    line-height:1.8;
+}
+
+/* CARDS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+    margin-top:50px;
+}
+
+.card{
+    background:white;
+    padding:35px 25px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.icon{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.card h3{
+    color:#071a3d;
+    margin-bottom:12px;
+    font-size:23px;
+}
+
+.card p{
+    color:#666;
+    line-height:1.7;
+}
+
+/* MISSION */
+
+.mission{
+    background:#071a3d;
+    color:white;
+    padding:70px 25px;
+    text-align:center;
+}
+
+.mission h2{
+    font-size:38px;
+    margin-bottom:20px;
+}
+
+.mission p{
+    max-width:800px;
+    margin:auto;
+    line-height:1.8;
+    font-size:18px;
+}
+
+/* PRODUCTS */
+
+.products{
+    max-width:1100px;
+    margin:auto;
+    padding:70px 25px;
+}
+
+.products h2{
+    text-align:center;
+    color:#071a3d;
+    font-size:38px;
+    margin-bottom:40px;
+}
+
+.product-list{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.product{
+    background:white;
+    padding:25px;
+    text-align:center;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.product h3{
+    color:#071a3d;
+    margin-bottom:10px;
+}
+
+.product p{
+    color:#777;
+}
+
+/* CTA */
+
+.cta{
+    text-align:center;
+    padding:70px 20px;
+    background:#ffd21c;
+}
+
+.cta h2{
+    color:#071a3d;
+    font-size:38px;
+    margin-bottom:15px;
+}
+
+.cta p{
+    margin-bottom:25px;
+}
+
+.cta a{
+    display:inline-block;
+    background:#071a3d;
+    color:white;
+    text-decoration:none;
+    padding:15px 35px;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+/* FOOTER */
+
+footer{
+    background:#050f25;
+    color:white;
+    text-align:center;
+    padding:30px 20px;
+}
+
+footer p{
+    margin:7px;
+    color:#ccc;
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+header{
+    flex-direction:column;
+    gap:15px;
+}
+
+nav{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+
+.hero h1{
+    font-size:40px;
+}
+
+.cards{
+    grid-template-columns:1fr;
+}
+
+.product-list{
+    grid-template-columns:1fr 1fr;
+}
+
+}
+
+@media(max-width:500px){
+
+.product-list{
+    grid-template-columns:1fr;
+}
+
+.hero{
+    min-height:320px;
+}
+
+.hero h1{
+    font-size:34px;
+}
+
+.about h2,
+.products h2,
+.mission h2,
+.cta h2{
+    font-size:30px;
+}
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+<div class="logo">
+DST RAWANA LANKA
+</div>
+
+<nav>
+
+<a href="index.html">HOME</a>
+
+<a href="products.html">PRODUCTS</a>
+
+<a href="about.html">ABOUT</a>
+
+<a href="order.html">ORDER</a>
+
+<a href="cart.html">CART 🛒</a>
+
+</nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div>
+
+<h1>About Us</h1>
+
+<p>Discover the story behind DST RAWANA LANKA</p>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about">
+
+<h2>Who We Are</h2>
+
+<p class="about-intro">
+
+Welcome to <strong>DST RAWANA LANKA</strong>.
+
+We are dedicated to providing delicious, refreshing and
+high-quality food and beverage products for our customers.
+
+Our goal is to bring quality, freshness and great taste
+together in every product we offer.
+
+</p>
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<div class="icon">🥛</div>
+
+<h3>Quality</h3>
+
+<p>
+We focus on providing quality products made with
+care and attention.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">🌱</div>
+
+<h3>Freshness</h3>
+
+<p>
+Fresh and enjoyable products are at the heart of
+DST RAWANA LANKA.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">❤️</div>
+
+<h3>Customer First</h3>
+
+<p>
+Our customers are important to us.
+We always aim to provide a great experience.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- MISSION -->
+
+<section class="mission">
+
+<h2>Our Mission</h2>
+
+<p>
+
+Our mission is to provide customers with delicious,
+refreshing and quality products while continuously
+improving our service and building a trusted Sri Lankan
+brand.
+
+</p>
+
+</section>
+
+
+<!-- PRODUCTS -->
+
+<section class="products">
+
+<h2>What We Offer</h2>
+
+<div class="product-list">
+
+
+<div class="product">
+
+<h3>🥛 Yoghurt</h3>
+
+<p>Fresh and delicious yoghurt products.</p>
+
+</div>
+
+
+<div class="product">
+
+<h3>🧃 Fruit Drinks</h3>
+
+<p>Refreshing fruit drinks with great taste.</p>
+
+</div>
+
+
+<div class="product">
+
+<h3>🧈 Butter</h3>
+
+<p>Rich and creamy butter products.</p>
+
+</div>
+
+
+<div class="product">
+
+<h3>🍯 Ghee</h3>
+
+<p>Quality ghee for your favourite meals.</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+<h2>Ready to Order?</h2>
+
+<p>
+Choose your favourite DST RAWANA LANKA products today.
+</p>
+
+<a href="order.html">
+ORDER NOW
+</a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<p><strong>DST RAWANA LANKA</strong></p>
+
+<p>Fresh • Quality • Delicious</p>
+
+<p>© 2026 DST RAWANA LANKA. All Rights Reserved.</p>
+
+</footer>
+
+
+</body>
+
+</html>
