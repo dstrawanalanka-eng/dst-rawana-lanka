@@ -1,0 +1,6 @@
+body{font-family:Arial;background:#fffaf3;padding:20px}
+header{display:flex;justify-content:space-between;align-items:center}
+nav a{margin:0 10px;text-decoration:none;color:#4b2c1a}
+section{margin:40px 0}
+.card{padding:15px;margin:10px 0;background:#fff;border-radius:10px}
+button{background:#4b2c1a;color:#fff;padding:10px 20px;border:none;border-radius:20px}

@@ -1,0 +1,1539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>DST RAWANA LANKA</title>
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f5f8fc;
+    color:#222;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:9999;
+    background:#fff;
+    box-shadow:0 3px 15px rgba(0,0,0,0.12);
+}
+
+.navbar{
+    max-width:1250px;
+    margin:auto;
+    min-height:75px;
+    padding:12px 25px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.logo{
+    font-size:25px;
+    font-weight:900;
+    color:#0756a3;
+    white-space:nowrap;
+}
+
+.logo span{
+    color:#e63946;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:25px;
+    list-style:none;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#222;
+    font-weight:700;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#0756a3;
+}
+
+.cart-link{
+    background:#0756a3;
+    color:white !important;
+    padding:11px 18px;
+    border-radius:30px;
+}
+
+.cart-link:hover{
+    background:#043d75;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:650px;
+
+    display:flex;
+    align-items:center;
+
+    background:
+    linear-gradient(
+        rgba(0,35,80,0.72),
+        rgba(0,35,80,0.72)
+    ),
+    url("images/hero.jpg");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content{
+    width:100%;
+    max-width:1250px;
+    margin:auto;
+    padding:40px 25px;
+    color:white;
+}
+
+.hero-content h1{
+    font-size:62px;
+    line-height:1.1;
+    max-width:750px;
+    font-weight:900;
+}
+
+.hero-content h1 span{
+    color:#ffd43b;
+}
+
+.hero-content p{
+    max-width:650px;
+    font-size:19px;
+    line-height:1.8;
+    margin:25px 0;
+}
+
+.buttons{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 28px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+.btn-yellow{
+    background:#ffd43b;
+    color:#111;
+}
+
+.btn-white{
+    background:white;
+    color:#0756a3;
+}
+
+/* =========================
+   SECTION
+========================= */
+
+section{
+    padding:80px 20px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.section-title h2{
+    color:#0756a3;
+    font-size:40px;
+    margin-bottom:10px;
+}
+
+.section-title p{
+    color:#777;
+    font-size:16px;
+}
+
+/* =========================
+   PRODUCTS
+========================= */
+
+.products-container{
+    max-width:1250px;
+    margin:auto;
+}
+
+.product-grid{
+    display:grid;
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap:25px;
+}
+
+.product-card{
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.08);
+
+    transition:0.3s;
+}
+
+.product-card:hover{
+    transform:translateY(-8px);
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,0.15);
+}
+
+.product-image{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    display:block;
+}
+
+.product-info{
+    padding:20px;
+}
+
+.product-info h3{
+    font-size:21px;
+    margin-bottom:8px;
+}
+
+.product-info p{
+    color:#777;
+    line-height:1.5;
+    min-height:45px;
+}
+
+.price{
+    color:#e63946;
+    font-size:22px;
+    font-weight:900;
+    margin:15px 0;
+}
+
+.add-cart{
+    width:100%;
+    border:none;
+    padding:13px;
+    border-radius:30px;
+
+    background:#0756a3;
+    color:white;
+
+    font-size:15px;
+    font-weight:bold;
+
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.add-cart:hover{
+    background:#043d75;
+    transform:scale(1.02);
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about{
+    background:white;
+}
+
+.about-container{
+    max-width:1250px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:50px;
+    align-items:center;
+}
+
+.about-image{
+    width:100%;
+    height:430px;
+    object-fit:cover;
+    border-radius:25px;
+}
+
+.about-text h2{
+    color:#0756a3;
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.about-text p{
+    color:#666;
+    line-height:1.8;
+    margin-bottom:15px;
+}
+
+/* =========================
+   FEATURES
+========================= */
+
+.features-container{
+    max-width:1250px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:25px;
+}
+
+.feature-card{
+    background:white;
+    padding:35px 25px;
+    text-align:center;
+
+    border-radius:20px;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.08);
+}
+
+.feature-icon{
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+.feature-card h3{
+    color:#0756a3;
+    margin-bottom:10px;
+}
+
+.feature-card p{
+    color:#777;
+    line-height:1.6;
+}
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery-container{
+    max-width:1250px;
+    margin:auto;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:20px;
+}
+
+.gallery-grid img{
+    width:100%;
+    height:270px;
+    object-fit:cover;
+    border-radius:20px;
+    transition:0.3s;
+}
+
+.gallery-grid img:hover{
+    transform:scale(1.03);
+}
+
+/* =========================
+   CTA
+========================= */
+
+.cta{
+    background:
+    linear-gradient(
+        135deg,
+        #0756a3,
+        #003566
+    );
+
+    text-align:center;
+    color:white;
+}
+
+.cta h2{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.cta p{
+    font-size:18px;
+    margin-bottom:25px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#111827;
+    color:white;
+    padding:55px 20px 20px;
+}
+
+.footer-container{
+    max-width:1250px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:
+        2fr 1fr 1fr;
+
+    gap:40px;
+}
+
+.footer-box h3{
+    color:#ffd43b;
+    margin-bottom:18px;
+}
+
+.footer-box p{
+    color:#aaa;
+    line-height:1.7;
+    margin-bottom:8px;
+}
+
+.footer-box a{
+    display:block;
+    color:#aaa;
+    text-decoration:none;
+    margin-bottom:10px;
+}
+
+.footer-box a:hover{
+    color:white;
+}
+
+.copyright{
+    text-align:center;
+
+    border-top:
+        1px solid #333;
+
+    margin-top:40px;
+    padding-top:20px;
+
+    color:#777;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:1000px){
+
+    .product-grid{
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .hero-content h1{
+        font-size:50px;
+    }
+
+}
+
+@media(max-width:700px){
+
+    .navbar{
+        flex-direction:column;
+        padding:15px;
+    }
+
+    .nav-links{
+        gap:12px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero{
+        min-height:580px;
+    }
+
+    .hero-content h1{
+        font-size:40px;
+    }
+
+    .hero-content p{
+        font-size:16px;
+    }
+
+    .product-grid{
+        grid-template-columns:1fr;
+    }
+
+    .about-container{
+        grid-template-columns:1fr;
+    }
+
+    .features-container{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-container{
+        grid-template-columns:1fr;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ==================================================
+     NAVIGATION
+================================================== -->
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+DST <span>RAWANA</span> LANKA
+</div>
+
+<ul class="nav-links">
+
+<li>
+<a href="#home">
+Home
+</a>
+</li>
+
+<li>
+<a href="#products">
+Products
+</a>
+</li>
+
+<li>
+<a href="#about">
+About
+</a>
+</li>
+
+<li>
+<a href="#gallery">
+Gallery
+</a>
+</li>
+
+<li>
+<a href="order.html">
+Order
+</a>
+</li>
+
+<li>
+<a href="cart.html"
+   class="cart-link">
+
+🛒 Cart
+<span id="cartCount">0</span>
+
+</a>
+</li>
+
+</ul>
+
+</nav>
+
+</header>
+
+
+<!-- ==================================================
+     HERO
+================================================== -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<h1>
+
+Fresh & Delicious
+<span>Products</span>
+From Sri Lanka
+
+</h1>
+
+<p>
+
+Welcome to DST RAWANA LANKA.
+Discover our fresh, delicious and quality
+food & beverage products made for your family.
+
+</p>
+
+<div class="buttons">
+
+<a href="#products"
+   class="btn btn-yellow">
+
+Explore Products
+
+</a>
+
+<a href="order.html"
+   class="btn btn-white">
+
+Order Now
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ==================================================
+     PRODUCTS
+================================================== -->
+
+<section id="products">
+
+<div class="products-container">
+
+<div class="section-title">
+
+<h2>
+Our Products
+</h2>
+
+<p>
+Fresh products made with quality ingredients
+</p>
+
+</div>
+
+
+<div class="product-grid">
+
+
+<!-- PRODUCT 01 -->
+
+<div class="product-card">
+
+<img
+src="images/yoghurt.jpg"
+alt="Yoghurt"
+class="product-image"
+>
+
+<div class="product-info">
+
+<h3>
+Yoghurt
+</h3>
+
+<p>
+Creamy and delicious yoghurt.
+</p>
+
+<div class="price">
+Rs. 170.00
+</div>
+
+<button
+class="add-cart"
+onclick="
+addToCart(
+'Yoghurt',
+170,
+'images/yoghurt.jpg'
+)
+">
+
+🛒 Add to Cart
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 02 -->
+
+<div class="product-card">
+
+<img
+src="images/fruit-drink.jpg"
+alt="Fruit Drink"
+class="product-image"
+>
+
+<div class="product-info">
+
+<h3>
+Fruit Drink
+</h3>
+
+<p>
+Refreshing and delicious fruit drink.
+</p>
+
+<div class="price">
+Rs. 250.00
+</div>
+
+<button
+class="add-cart"
+onclick="
+addToCart(
+'Fruit Drink',
+250,
+'images/fruit-drink.jpg'
+)
+">
+
+🛒 Add to Cart
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 03 -->
+
+<div class="product-card">
+
+<img
+src="images/butter.jpg"
+alt="Butter"
+class="product-image"
+>
+
+<div class="product-info">
+
+<h3>
+Butter
+</h3>
+
+<p>
+Rich and creamy premium butter.
+</p>
+
+<div class="price">
+Rs. 750.00
+</div>
+
+<button
+class="add-cart"
+onclick="
+addToCart(
+'Butter',
+750,
+'images/butter.jpg'
+)
+">
+
+🛒 Add to Cart
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 04 -->
+
+<div class="product-card">
+
+<img
+src="images/ghee.jpg"
+alt="Ghee"
+class="product-image"
+>
+
+<div class="product-info">
+
+<h3>
+Ghee
+</h3>
+
+<p>
+Pure and aromatic traditional ghee.
+</p>
+
+<div class="price">
+Rs. 950.00
+</div>
+
+<button
+class="add-cart"
+onclick="
+addToCart(
+'Ghee',
+950,
+'images/ghee.jpg'
+)
+">
+
+🛒 Add to Cart
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 05 -->
+
+<div class="product-card">
+
+<img
+src="images/jelly-yoghurt.jpg"
+alt="Jelly Yoghurt"
+class="product-image"
+>
+
+<div class="product-info">
+
+<h3>
+Jelly Yoghurt
+</h3>
+
+<p>
+Sweet and creamy jelly yoghurt.
+</p>
+
+<div class="price">
+Rs. 180.00
+</div>
+
+<button
+class="add-cart"
+onclick="
+addToCart(
+'Jelly Yoghurt',
+180,
+'images/jelly-yoghurt.jpg'
+)
+">
+
+🛒 Add to Cart
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 06 -->
+
+<div class="product-card">
+
+<img
+src="images/aloe-vera.jpg"
+alt="Aloe Vera Drink"
+class="product-image"
+>
+
+<div class="product-info">
+
+<h3>
+Aloe Vera Drink
+</h3>
+
+<p>
+Refreshing aloe vera drink.
+</p>
+
+<div class="price">
+Rs. 220.00
+</div>
+
+<button
+class="add-cart"
+onclick="
+addToCart(
+'Aloe Vera Drink',
+220,
+'images/aloe-vera.jpg'
+)
+">
+
+🛒 Add to Cart
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 07 -->
+
+<div class="product-card">
+
+<img
+src="images/passion.jpg"
+alt="Passion Drink"
+class="product-image"
+>
+
+<div class="product-info">
+
+<h3>
+Passion Drink
+</h3>
+
+<p>
+Sweet and refreshing passion drink.
+</p>
+
+<div class="price">
+Rs. 220.00
+</div>
+
+<button
+class="add-cart"
+onclick="
+addToCart(
+'Passion Drink',
+220,
+'images/passion.jpg'
+)
+">
+
+🛒 Add to Cart
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 08 -->
+
+<div class="product-card">
+
+<img
+src="images/mango.jpg"
+alt="Mango Fruit Drink"
+class="product-image"
+>
+
+<div class="product-info">
+
+<h3>
+Mango Fruit Drink
+</h3>
+
+<p>
+Delicious mango flavour.
+</p>
+
+<div class="price">
+Rs. 220.00
+</div>
+
+<button
+class="add-cart"
+onclick="
+addToCart(
+'Mango Fruit Drink',
+220,
+'images/mango.jpg'
+)
+">
+
+🛒 Add to Cart
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 09 -->
+
+<div class="product-card">
+
+<img
+src="images/lime.jpg"
+alt="Lime Drink"
+class="product-image"
+>
+
+<div class="product-info">
+
+<h3>
+Lime Drink
+</h3>
+
+<p>
+Fresh and cool lime drink.
+</p>
+
+<div class="price">
+Rs. 200.00
+</div>
+
+<button
+class="add-cart"
+onclick="
+addToCart(
+'Lime Drink',
+200,
+'images/lime.jpg'
+)
+">
+
+🛒 Add to Cart
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 10 -->
+
+<div class="product-card">
+
+<img
+src="images/mix-fruit.jpg"
+alt="Mix Fruit Drink"
+class="product-image"
+>
+
+<div class="product-info">
+
+<h3>
+Mix Fruit Drink
+</h3>
+
+<p>
+A delicious blend of fruits.
+</p>
+
+<div class="price">
+Rs. 250.00
+</div>
+
+<button
+class="add-cart"
+onclick="
+addToCart(
+'Mix Fruit Drink',
+250,
+'images/mix-fruit.jpg'
+)
+">
+
+🛒 Add to Cart
+
+</button>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ==================================================
+     ABOUT
+================================================== -->
+
+<section
+id="about"
+class="about"
+>
+
+<div class="about-container">
+
+<img
+src="images/about.jpg"
+alt="DST Rawana Lanka"
+class="about-image"
+>
+
+<div class="about-text">
+
+<h2>
+About DST RAWANA LANKA
+</h2>
+
+<p>
+
+DST RAWANA LANKA is focused on bringing
+quality, fresh and delicious food and beverage
+products to our customers.
+
+</p>
+
+<p>
+
+We believe in quality, freshness and
+customer satisfaction.
+
+</p>
+
+<a
+href="about.html"
+class="btn btn-yellow"
+>
+
+Learn More
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ==================================================
+     FEATURES
+================================================== -->
+
+<section>
+
+<div class="section-title">
+
+<h2>
+Why Choose Us?
+</h2>
+
+<p>
+Quality you can trust
+</p>
+
+</div>
+
+
+<div class="features-container">
+
+
+<div class="feature-card">
+
+<div class="feature-icon">
+🥛
+</div>
+
+<h3>
+Fresh Products
+</h3>
+
+<p>
+Fresh and delicious products
+for your family.
+</p>
+
+</div>
+
+
+<div class="feature-card">
+
+<div class="feature-icon">
+⭐
+</div>
+
+<h3>
+High Quality
+</h3>
+
+<p>
+Quality ingredients and
+careful production.
+</p>
+
+</div>
+
+
+<div class="feature-card">
+
+<div class="feature-icon">
+🚚
+</div>
+
+<h3>
+Easy Ordering
+</h3>
+
+<p>
+Order your favourite products
+easily.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- ==================================================
+     GALLERY
+================================================== -->
+
+<section id="gallery">
+
+<div class="gallery-container">
+
+<div class="section-title">
+
+<h2>
+Our Gallery
+</h2>
+
+<p>
+See our products
+</p>
+
+</div>
+
+
+<div class="gallery-grid">
+
+<img
+src="images/gallery1.jpg"
+alt="Gallery 1"
+>
+
+<img
+src="images/gallery2.jpg"
+alt="Gallery 2"
+>
+
+<img
+src="images/gallery3.jpg"
+alt="Gallery 3"
+>
+
+<img
+src="images/gallery4.jpg"
+alt="Gallery 4"
+>
+
+<img
+src="images/gallery5.jpg"
+alt="Gallery 5"
+>
+
+<img
+src="images/gallery6.jpg"
+alt="Gallery 6"
+>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ==================================================
+     ORDER CTA
+================================================== -->
+
+<section class="cta">
+
+<h2>
+Ready to Order?
+</h2>
+
+<p>
+Choose your favourite products and
+place your order today.
+</p>
+
+<div class="buttons"
+style="justify-content:center;">
+
+<a
+href="order.html"
+class="btn btn-yellow"
+>
+Order Now
+</a>
+
+<a
+href="cart.html"
+class="btn btn-white"
+>
+View Cart
+</a>
+
+</div>
+
+</section>
+
+
+<!-- ==================================================
+     FOOTER
+================================================== -->
+
+<footer>
+
+<div class="footer-container">
+
+
+<div class="footer-box">
+
+<h3>
+DST RAWANA LANKA
+</h3>
+
+<p>
+
+Fresh, delicious and quality
+food & beverage products
+from Sri Lanka.
+
+</p>
+
+</div>
+
+
+<div class="footer-box">
+
+<h3>
+Quick Links
+</h3>
+
+<a href="#home">
+Home
+</a>
+
+<a href="#products">
+Products
+</a>
+
+<a href="#about">
+About
+</a>
+
+<a href="#gallery">
+Gallery
+</a>
+
+<a href="order.html">
+Order
+</a>
+
+<a href="cart.html">
+Cart
+</a>
+
+</div>
+
+
+<div class="footer-box">
+
+<h3>
+Contact
+</h3>
+
+<p>
+📞 +94 71 488 1433
+</p>
+
+<p>
+📍 Sri Lanka
+</p>
+
+</div>
+
+
+</div>
+
+
+<div class="copyright">
+
+© 2026 DST RAWANA LANKA.
+All Rights Reserved.
+
+</div>
+
+</footer>
+
+
+<!-- ==================================================
+     CART JAVASCRIPT
+================================================== -->
+
+<script>
+
+let cart =
+JSON.parse(
+localStorage.getItem("cart")
+) || [];
+
+
+/* ADD PRODUCT TO CART */
+
+function addToCart(
+    name,
+    price,
+    image
+){
+
+    let existingProduct =
+    cart.find(
+        item => item.name === name
+    );
+
+
+    if(existingProduct){
+
+        existingProduct.quantity++;
+
+    }
+
+    else{
+
+        cart.push({
+
+            name:name,
+
+            price:price,
+
+            image:image,
+
+            quantity:1
+
+        });
+
+    }
+
+
+    localStorage.setItem(
+        "cart",
+        JSON.stringify(cart)
+    );
+
+
+    updateCartCount();
+
+
+    alert(
+        "✅ " +
+        name +
+        " added to cart!"
+    );
+
+}
+
+
+/* UPDATE CART NUMBER */
+
+function updateCartCount(){
+
+    let totalItems = 0;
+
+
+    cart.forEach(
+        item => {
+
+            totalItems +=
+            item.quantity;
+
+        }
+    );
+
+
+    let count =
+    document.getElementById(
+        "cartCount"
+    );
+
+
+    if(count){
+
+        count.innerText =
+        totalItems;
+
+    }
+
+}
+
+
+/* LOAD CART COUNT */
+
+updateCartCount();
+
+</script>
+
+
+</body>
+</html>
