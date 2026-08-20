@@ -1,387 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Order | DST RAWANA LANKA</title>
+<title>DST RAWANA LANKA | Products</title>
 
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    background:#f4f8fc;
-    color:#222;
-}
-
-/* ================= HEADER ================= */
-
-header{
-    background:#071a3d;
-    padding:20px 7%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    position:sticky;
-    top:0;
-    z-index:1000;
-    box-shadow:0 3px 15px rgba(0,0,0,.2);
-}
-
-.logo{
-    color:white;
-    font-size:25px;
-    font-weight:bold;
-}
-
-nav{
-    display:flex;
-    gap:25px;
-    align-items:center;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    font-weight:bold;
-    transition:.3s;
-}
-
-nav a:hover{
-    color:#ffd21c;
-}
-
-/* ================= HERO ================= */
-
-.hero{
-    min-height:330px;
-
-    background:
-    linear-gradient(rgba(7,26,61,.82),rgba(7,26,61,.82)),
-    url("images/order.jpg");
-
-    background-size:cover;
-    background-position:center;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-}
-
-.hero h1{
-    color:white;
-    font-size:55px;
-    margin-bottom:15px;
-}
-
-.hero p{
-    color:white;
-    font-size:19px;
-}
-
-/* ================= ORDER SECTION ================= */
-
-.order-section{
-    padding:70px 20px;
-}
-
-.order-box{
-    max-width:650px;
-    margin:auto;
-    background:white;
-    padding:40px;
-    border-radius:20px;
-
-    box-shadow:
-    0 10px 35px rgba(0,0,0,.12);
-}
-
-.order-box h2{
-    text-align:center;
-    color:#071a3d;
-    font-size:32px;
-    margin-bottom:10px;
-}
-
-.order-description{
-    text-align:center;
-    color:#777;
-    margin-bottom:30px;
-}
-
-/* ================= FORM ================= */
-
-.form-group{
-    margin-bottom:20px;
-}
-
-.form-group label{
-    display:block;
-    margin-bottom:8px;
-    font-weight:bold;
-    color:#071a3d;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea{
-
-    width:100%;
-
-    padding:14px;
-
-    border:1px solid #d5dbe5;
-
-    border-radius:9px;
-
-    outline:none;
-
-    font-size:16px;
-
-    transition:.3s;
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus{
-
-    border-color:#0b63ce;
-
-    box-shadow:
-    0 0 0 3px rgba(11,99,206,.1);
-}
-
-.form-group textarea{
-    min-height:100px;
-    resize:vertical;
-}
-
-/* ================= QUANTITY ================= */
-
-.quantity-box{
-    display:flex;
-    align-items:center;
-    gap:10px;
-}
-
-.quantity-box input{
-    text-align:center;
-}
-
-/* ================= BUTTON ================= */
-
-.order-button{
-
-    width:100%;
-
-    padding:16px;
-
-    border:none;
-
-    border-radius:10px;
-
-    background:#0b63ce;
-
-    color:white;
-
-    font-size:18px;
-
-    font-weight:bold;
-
-    cursor:pointer;
-
-    transition:.3s;
-
-    margin-top:10px;
-}
-
-.order-button:hover{
-
-    background:#084c9e;
-
-    transform:translateY(-2px);
-
-}
-
-/* ================= WHATSAPP ================= */
-
-.whatsapp-note{
-
-    text-align:center;
-
-    margin-top:18px;
-
-    color:#777;
-
-    font-size:14px;
-
-}
-
-.whatsapp-note strong{
-    color:#159447;
-}
-
-/* ================= INFO CARDS ================= */
-
-.order-info{
-
-    max-width:1000px;
-
-    margin:50px auto 0;
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(3,1fr);
-
-    gap:20px;
-}
-
-.info-card{
-
-    background:white;
-
-    padding:25px;
-
-    text-align:center;
-
-    border-radius:15px;
-
-    box-shadow:
-    0 5px 20px rgba(0,0,0,.08);
-
-}
-
-.info-icon{
-
-    font-size:40px;
-
-    margin-bottom:12px;
-
-}
-
-.info-card h3{
-
-    color:#071a3d;
-
-    margin-bottom:8px;
-
-}
-
-.info-card p{
-
-    color:#777;
-
-    line-height:1.5;
-
-}
-
-/* ================= FOOTER ================= */
-
-footer{
-
-    background:#050f25;
-
-    color:white;
-
-    text-align:center;
-
-    padding:30px 20px;
-
-    margin-top:50px;
-
-}
-
-footer p{
-    margin:7px;
-    color:#ccc;
-}
-
-/* ================= MOBILE ================= */
-
-@media(max-width:800px){
-
-header{
-    flex-direction:column;
-    gap:15px;
-}
-
-nav{
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:15px;
-}
-
-.hero h1{
-    font-size:40px;
-}
-
-.order-info{
-    grid-template-columns:1fr;
-}
-
-}
-
-@media(max-width:500px){
-
-.order-box{
-    padding:25px 20px;
-}
-
-.hero{
-    min-height:280px;
-}
-
-.hero h1{
-    font-size:35px;
-}
-
-.order-box h2{
-    font-size:27px;
-}
-
-}
-
-</style>
+<link rel="stylesheet" href="style.css">
 
 </head>
 
-
 <body>
-
 
 <!-- ================= HEADER ================= -->
 
 <header>
 
-<div class="logo">
-DST RAWANA LANKA
+<nav class="navbar">
+
+<a href="index.html" class="logo">
+
+<div class="logo-box">D</div>
+
+<div class="logo-text">
+<span class="dst">DST</span>
+<span class="rawana">RAWANA</span>
+<span class="lanka">LANKA</span>
 </div>
 
-<nav>
+</a>
 
-<a href="index.html">HOME</a>
+<ul class="nav-links">
 
-<a href="products.html">PRODUCTS</a>
+<li><a href="index.html">Home</a></li>
+<li><a href="products.html" class="active">Products</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="order.html">Order</a></li>
 
-<a href="about.html">ABOUT</a>
+<li>
+<a href="cart.html" class="cart-button">
+🛒 Cart <span id="cartCount">0</span>
+</a>
+</li>
 
-<a href="order.html">ORDER</a>
-
-<a href="cart.html">CART 🛒</a>
+</ul>
 
 </nav>
 
@@ -390,14 +53,17 @@ DST RAWANA LANKA
 
 <!-- ================= HERO ================= -->
 
-<section class="hero">
+<section class="products-hero">
 
 <div>
 
-<h1>Place Your Order</h1>
+<span>OUR COLLECTION</span>
+
+<h1>Our Products</h1>
 
 <p>
-Fresh & Quality Products from DST RAWANA LANKA
+Fresh, delicious and quality products from
+DST RAWANA LANKA.
 </p>
 
 </div>
@@ -405,252 +71,431 @@ Fresh & Quality Products from DST RAWANA LANKA
 </section>
 
 
-<!-- ================= ORDER FORM ================= -->
+<!-- ================= PRODUCTS ================= -->
 
-<section class="order-section">
+<section class="products-section">
 
+<div class="section-title">
 
-<div class="order-box">
+<span>FRESH & QUALITY</span>
 
-<h2>Order Now</h2>
+<h2>Our Products</h2>
 
-<p class="order-description">
-
-Fill in your details and send your order directly to us.
-
+<p>
+Choose your favourite product and add it to your cart.
 </p>
 
+</div>
 
-<form onsubmit="sendOrder(event)">
+
+<div class="product-grid">
 
 
-<!-- NAME -->
+<!-- 1 YOGHURT -->
 
-<div class="form-group">
+<div class="product-card">
 
-<label for="name">
-👤 Your Name
-</label>
+<img src="images/yoghurt.jpg"
+alt="Yoghurt">
+
+<div class="product-info">
+
+<h3>🥛 Yoghurt</h3>
+
+<p>
+Creamy, fresh and delicious yoghurt.
+</p>
+
+<div class="price">
+Rs. 80.00
+</div>
+
+<button
+class="add-cart"
+onclick="addToCart('Yoghurt',80,'images/yoghurt.jpg')">
+
+🛒 Add to Cart
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- 2 FRUIT DRINK -->
+
+<div class="product-card">
+
+<img src="images/fruit-drink.jpg"
+alt="Fruit Drink">
+
+<div class="product-info">
+
+<h3>🍹 Fruit Drink</h3>
+
+<p>
+Refreshing fruit drink for every moment.
+</p>
+
+<div class="price">
+Rs. 160.00
+</div>
+
+<button
+class="add-cart"
+onclick="addToCart('Fruit Drink',160,'images/fruit-drink.jpg')">
+
+🛒 Add to Cart
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- 3 BUTTER -->
+
+<div class="product-card">
+
+<img src="images/butter.jpg"
+alt="Butter">
+
+<div class="product-info">
+
+<h3>🧈 Butter</h3>
+
+<p>
+Rich and creamy premium butter.
+</p>
+
+<div class="price">
+Rs. 2750.00
+</div>
+
+<button
+class="add-cart"
+onclick="addToCart('Butter',2750,'images/butter.jpg')">
+
+🛒 Add to Cart
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- 4 GHEE -->
+
+<div class="product-card">
+
+<img src="images/ghee.jpg"
+alt="Ghee">
+
+<div class="product-info">
+
+<h3>🥛 Ghee</h3>
+
+<p>
+Pure and aromatic traditional ghee.
+</p>
+
+<div class="price">
+Rs. 4500.00
+</div>
+
+<button
+class="add-cart"
+onclick="addToCart('Ghee',4500,'images/ghee.jpg')">
+
+🛒 Add to Cart
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- 5 JELLY YOGHURT -->
+
+<div class="product-card">
+
+<img src="images/jelly-yoghurt.jpg"
+alt="Jelly Yoghurt">
+
+<div class="product-info">
+
+<h3>🍮 Jelly Yoghurt</h3>
+
+<p>
+Sweet and creamy jelly yoghurt.
+</p>
+
+<div class="price">
+Rs. 80.00
+</div>
+
+<button
+class="add-cart"
+onclick="addToCart('Jelly Yoghurt',80,'images/jelly-yoghurt.jpg')">
+
+🛒 Add to Cart
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- 6 ALOE VERA -->
+
+<div class="product-card">
+
+<img src="images/aloe-vera.jpg"
+alt="Aloe Vera Drink">
+
+<div class="product-info">
+
+<h3>🌿 Aloe Vera Drink</h3>
+
+<p>
+Refreshing aloe vera drink.
+</p>
+
+<div class="price">
+Rs. 150.00
+</div>
+
+<button
+class="add-cart"
+onclick="addToCart('Aloe Vera Drink',150,'images/aloe-vera.jpg')">
+
+🛒 Add to Cart
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- 7 PASSION -->
+
+<div class="product-card">
+
+<img src="images/passion.jpg"
+alt="Passion Drink">
+
+<div class="product-info">
+
+<h3>💜 Passion Drink</h3>
+
+<p>
+Sweet and refreshing passion drink.
+</p>
+
+<div class="price">
+Rs. 150.00
+</div>
+
+<button
+class="add-cart"
+onclick="addToCart('Passion Drink',150,'images/passion.jpg')">
+
+🛒 Add to Cart
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- 8 MANGO -->
+
+<div class="product-card">
+
+<img src="images/mango.jpg"
+alt="Mango Fruit Drink">
+
+<div class="product-info">
+
+<h3>🥭 Mango Fruit Drink</h3>
+
+<p>
+Delicious mango flavour.
+</p>
+
+<div class="price">
+Rs. 150.00
+</div>
+
+<button
+class="add-cart"
+onclick="addToCart('Mango Fruit Drink',150,'images/mango.jpg')">
+
+🛒 Add to Cart
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- 9 LIME -->
+
+<div class="product-card">
+
+<img src="images/lime.jpg"
+alt="Lime Drink">
+
+<div class="product-info">
+
+<h3>🍋 Lime Drink</h3>
+
+<p>
+Fresh and cool lime drink.
+</p>
+
+<div class="price">
+Rs. 150.00
+</div>
+
+<button
+class="add-cart"
+onclick="addToCart('Lime Drink',150,'images/lime.jpg')">
+
+🛒 Add to Cart
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- 10 MIX FRUIT -->
+
+<div class="product-card">
+
+<img src="images/mix-fruit.jpg"
+alt="Mix Fruit Drink">
+
+<div class="product-info">
+
+<h3>🍹 Mix Fruit Drink</h3>
+
+<p>
+A delicious blend of fresh fruits.
+</p>
+
+<div class="price">
+Rs. 150.00
+</div>
+
+<button
+class="add-cart"
+onclick="addToCart('Mix Fruit Drink',150,'images/mix-fruit.jpg')">
+
+🛒 Add to Cart
+
+</button>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- ================= REVIEWS ================= -->
+
+<section class="reviews-section">
+
+<div class="section-title">
+
+<span>CUSTOMER REVIEWS</span>
+
+<h2>What Our Customers Say</h2>
+
+<p>
+Share your experience with DST RAWANA LANKA.
+</p>
+
+</div>
+
+
+<div class="review-box">
+
+<h3>Leave a Review</h3>
+
+
+<label>Your Name</label>
 
 <input
 type="text"
-id="name"
+id="reviewName"
 placeholder="Enter your name"
-required
+maxlength="50"
 >
 
-</div>
 
+<label>Rating</label>
 
-<!-- PHONE -->
+<select id="reviewRating">
 
-<div class="form-group">
-
-<label for="phone">
-📞 Phone Number
-</label>
-
-<input
-type="tel"
-id="phone"
-placeholder="Enter your phone number"
-required
->
-
-</div>
-
-
-<!-- PRODUCT -->
-
-<div class="form-group">
-
-<label for="product">
-🥛 Select Product
-</label>
-
-<select id="product" required>
-
-<option value="">
--- Select Product --
-</option>
-
-<option value="Yoghurt - Rs. 170.00">
-Yoghurt - Rs. 170.00
-</option>
-
-<option value="Fruit Drink - Rs. 250.00">
-Fruit Drink - Rs. 250.00
-</option>
-
-<option value="Butter - Rs. 750.00">
-Butter - Rs. 750.00
-</option>
-
-<option value="Ghee - Rs. 950.00">
-Ghee - Rs. 950.00
-</option>
-
-<option value="Jelly Yoghurt - Rs. 180.00">
-Jelly Yoghurt - Rs. 180.00
-</option>
-
-<option value="Aloe Vera Drink - Rs. 220.00">
-Aloe Vera Drink - Rs. 220.00
-</option>
-
-<option value="Passion Drink - Rs. 220.00">
-Passion Drink - Rs. 220.00
-</option>
-
-<option value="Mango Fruit Drink - Rs. 220.00">
-Mango Fruit Drink - Rs. 220.00
-</option>
-
-<option value="Lime Drink - Rs. 200.00">
-Lime Drink - Rs. 200.00
-</option>
-
-<option value="Mix Fruit Drink - Rs. 250.00">
-Mix Fruit Drink - Rs. 250.00
-</option>
+<option value="">Select rating</option>
+<option value="5">⭐⭐⭐⭐⭐ 5 - Excellent</option>
+<option value="4">⭐⭐⭐⭐ 4 - Very Good</option>
+<option value="3">⭐⭐⭐ 3 - Good</option>
+<option value="2">⭐⭐ 2 - Fair</option>
+<option value="1">⭐ 1 - Poor</option>
 
 </select>
 
-</div>
 
-
-<!-- QUANTITY -->
-
-<div class="form-group">
-
-<label for="quantity">
-🔢 Quantity
-</label>
-
-<input
-type="number"
-id="quantity"
-min="1"
-value="1"
-required
->
-
-</div>
-
-
-<!-- ADDRESS -->
-
-<div class="form-group">
-
-<label for="address">
-📍 Delivery Address
-</label>
+<label>Your Comment</label>
 
 <textarea
-id="address"
-placeholder="Enter your delivery address"
-required
+id="reviewComment"
+placeholder="Write your comment..."
+maxlength="300"
 ></textarea>
 
-</div>
-
-
-<!-- NOTE -->
-
-<div class="form-group">
-
-<label for="note">
-📝 Additional Note
-</label>
-
-<textarea
-id="note"
-placeholder="Any special request? (Optional)"
-></textarea>
-
-</div>
-
-
-<!-- BUTTON -->
 
 <button
-type="submit"
-class="order-button"
->
+class="review-button"
+onclick="submitReview()">
 
-📲 ORDER VIA WHATSAPP
+⭐ Submit Review
 
 </button>
 
 
-<p class="whatsapp-note">
-
-Your order will open in
-<strong>WhatsApp</strong>.
-
-</p>
-
-
-</form>
+<p id="reviewMessage"></p>
 
 </div>
 
 
-<!-- ================= INFO ================= -->
+<!-- REVIEWS DISPLAY -->
 
-<div class="order-info">
+<div
+id="reviewsContainer"
+class="reviews-container">
 
-
-<div class="info-card">
-
-<div class="info-icon">
-🚚
-</div>
-
-<h3>Fast Delivery</h3>
-
-<p>
-We aim to provide convenient delivery
-for your order.
+<p class="loading">
+Loading reviews...
 </p>
 
 </div>
-
-
-<div class="info-card">
-
-<div class="info-icon">
-🥛
-</div>
-
-<h3>Quality Products</h3>
-
-<p>
-Enjoy our range of delicious and
-quality products.
-</p>
-
-</div>
-
-
-<div class="info-card">
-
-<div class="info-icon">
-📱
-</div>
-
-<h3>Easy Ordering</h3>
-
-<p>
-Send your order directly through
-WhatsApp.
-</p>
-
-</div>
-
-
-</div>
-
 
 </section>
 
@@ -659,86 +504,353 @@ WhatsApp.
 
 <footer>
 
-<p>
-<strong>DST RAWANA LANKA</strong>
-</p>
+<div class="footer-container">
+
+<div>
+
+<h3>DST RAWANA LANKA</h3>
 
 <p>
-Fresh • Quality • Delicious
+Fresh, delicious and quality products
+made for you.
 </p>
 
-<p>
+</div>
+
+
+<div>
+
+<h3>Quick Links</h3>
+
+<a href="index.html">Home</a>
+<a href="products.html">Products</a>
+<a href="about.html">About</a>
+<a href="order.html">Order</a>
+<a href="cart.html">Cart</a>
+
+</div>
+
+
+<div>
+
+<h3>Contact</h3>
+
+<p>📞 +94 71 488 1433</p>
+
+<p>📍 Sri Lanka</p>
+
+</div>
+
+</div>
+
+
+<div class="copyright">
+
 © 2026 DST RAWANA LANKA. All Rights Reserved.
-</p>
+
+</div>
 
 </footer>
 
 
+<!-- ================= CART SCRIPT ================= -->
+
 <script>
 
-function sendOrder(event){
-
-    event.preventDefault();
-
-
-    let name =
-    document.getElementById("name").value;
-
-    let phone =
-    document.getElementById("phone").value;
-
-    let product =
-    document.getElementById("product").value;
-
-    let quantity =
-    document.getElementById("quantity").value;
-
-    let address =
-    document.getElementById("address").value;
-
-    let note =
-    document.getElementById("note").value;
+let cart =
+JSON.parse(localStorage.getItem("cart")) || [];
 
 
-    let message =
-`🌿 DST RAWANA LANKA ORDER 🌿
+function addToCart(name,price,image){
 
-👤 Customer Name:
-${name}
-
-📞 Phone:
-${phone}
-
-🥛 Product:
-${product}
-
-🔢 Quantity:
-${quantity}
-
-📍 Delivery Address:
-${address}
-
-📝 Additional Note:
-${note || "None"}
-
-Thank you for ordering from DST RAWANA LANKA!`;
+let existing =
+cart.find(item => item.name === name);
 
 
-    let whatsappNumber =
-    "94714881433";
+if(existing){
+
+existing.quantity++;
+
+}else{
+
+cart.push({
+
+name:name,
+price:price,
+image:image,
+quantity:1
+
+});
+
+}
 
 
-    let whatsappURL =
-    "https://wa.me/" +
-    whatsappNumber +
-    "?text=" +
-    encodeURIComponent(message);
+localStorage.setItem(
+"cart",
+JSON.stringify(cart)
+);
+
+updateCartCount();
+
+alert("✓ " + name + " added to cart!");
+
+}
 
 
-    window.open(
-        whatsappURL,
-        "_blank"
-    );
+function updateCartCount(){
+
+let count = 0;
+
+cart.forEach(item => {
+
+count += item.quantity;
+
+});
+
+
+let cartCount =
+document.getElementById("cartCount");
+
+
+if(cartCount){
+
+cartCount.innerText = count;
+
+}
+
+}
+
+
+updateCartCount();
+
+</script>
+
+
+<!-- ================= FIREBASE REVIEWS ================= -->
+
+<script type="module">
+
+import { initializeApp }
+from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
+
+import {
+getFirestore,
+collection,
+addDoc,
+serverTimestamp,
+query,
+orderBy,
+onSnapshot
+}
+from "https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js";
+
+
+const firebaseConfig = {
+
+apiKey: "AIzaSyDQ-oid7lgzC9CcoEQE4Cqlc9IXiU5mTYw",
+
+authDomain: "dst-rawana-lanka-6c9a6.firebaseapp.com",
+
+projectId: "dst-rawana-lanka-6c9a6",
+
+storageBucket: "dst-rawana-lanka-6c9a6.firebasestorage.app",
+
+messagingSenderId: "330485253308",
+
+appId: "1:330485253308:web:a5556005201226e2dabcb9",
+
+measurementId: "G-3ZVRFDJWMY"
+
+};
+
+
+const app = initializeApp(firebaseConfig);
+
+const db = getFirestore(app);
+
+
+window.submitReview = async function(){
+
+const name =
+document.getElementById("reviewName")
+.value.trim();
+
+const rating =
+document.getElementById("reviewRating")
+.value;
+
+const comment =
+document.getElementById("reviewComment")
+.value.trim();
+
+const message =
+document.getElementById("reviewMessage");
+
+
+if(!name){
+
+message.innerText =
+"Please enter your name.";
+
+return;
+
+}
+
+
+if(!rating){
+
+message.innerText =
+"Please select a rating.";
+
+return;
+
+}
+
+
+if(!comment){
+
+message.innerText =
+"Please write a comment.";
+
+return;
+
+}
+
+
+try{
+
+await addDoc(
+collection(db,"reviews"),
+{
+
+name:name,
+
+rating:Number(rating),
+
+comment:comment,
+
+createdAt:serverTimestamp()
+
+}
+);
+
+
+message.innerText =
+"✓ Review submitted successfully!";
+
+document.getElementById("reviewName").value="";
+
+document.getElementById("reviewRating").value="";
+
+document.getElementById("reviewComment").value="";
+
+
+}catch(error){
+
+console.error(error);
+
+message.innerText =
+"❌ Could not submit review.";
+
+}
+
+};
+
+
+// ================= LOAD REVIEWS =================
+
+const reviewsQuery =
+query(
+collection(db,"reviews"),
+orderBy("createdAt","desc")
+);
+
+
+onSnapshot(
+reviewsQuery,
+(snapshot)=>{
+
+const container =
+document.getElementById(
+"reviewsContainer"
+);
+
+container.innerHTML="";
+
+
+if(snapshot.empty){
+
+container.innerHTML =
+"<p class='loading'>No reviews yet. Be the first!</p>";
+
+return;
+
+}
+
+
+snapshot.forEach(doc=>{
+
+const review = doc.data();
+
+
+let stars = "";
+
+for(let i=0;i<review.rating;i++){
+
+stars += "⭐";
+
+}
+
+
+const card =
+document.createElement("div");
+
+card.className="review-card";
+
+
+card.innerHTML = `
+
+<div class="review-stars">
+${stars}
+</div>
+
+<h3>${escapeHTML(review.name)}</h3>
+
+<p>
+${escapeHTML(review.comment)}
+</p>
+
+`;
+
+
+container.appendChild(card);
+
+});
+
+},
+(error)=>{
+
+console.error(error);
+
+document.getElementById(
+"reviewsContainer"
+).innerHTML =
+"<p class='loading'>Unable to load reviews.</p>";
+
+}
+);
+
+
+// Prevent HTML injection
+
+function escapeHTML(text){
+
+const div =
+document.createElement("div");
+
+div.textContent = text;
+
+return div.innerHTML;
 
 }
 
@@ -746,5 +858,4 @@ Thank you for ordering from DST RAWANA LANKA!`;
 
 
 </body>
-
 </html>
