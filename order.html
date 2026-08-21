@@ -10,6 +10,10 @@
 
 <style>
 
+/* =========================
+   RESET
+========================= */
+
 *{
     margin:0;
     padding:0;
@@ -27,7 +31,9 @@ body{
 }
 
 
-/* ================= HEADER ================= */
+/* =========================
+   HEADER
+========================= */
 
 header{
     position:sticky;
@@ -41,6 +47,7 @@ header{
 }
 
 .navbar{
+
     max-width:1400px;
     min-height:100px;
 
@@ -56,6 +63,7 @@ header{
 /* LOGO */
 
 .logo{
+
     display:flex;
     align-items:center;
     gap:14px;
@@ -64,6 +72,7 @@ header{
 }
 
 .logo-box{
+
     width:58px;
     height:58px;
 
@@ -78,6 +87,9 @@ header{
 
     font-size:27px;
     font-weight:900;
+
+    box-shadow:
+    0 8px 18px rgba(75,42,24,0.18);
 }
 
 .logo-text{
@@ -85,6 +97,7 @@ header{
 }
 
 .dst{
+
     display:block;
 
     font-size:20px;
@@ -96,6 +109,7 @@ header{
 }
 
 .rawana{
+
     font-size:22px;
     font-weight:900;
 
@@ -105,6 +119,7 @@ header{
 }
 
 .lanka{
+
     font-size:22px;
     font-weight:900;
 
@@ -116,20 +131,23 @@ header{
 }
 
 
-/* NAV */
+/* NAVIGATION */
 
 .nav-links{
+
     display:flex;
     align-items:center;
+
     gap:28px;
 
     list-style:none;
 }
 
 .nav-links a{
-    color:#4b2a18;
 
     text-decoration:none;
+
+    color:#4b2a18;
 
     font-size:15px;
     font-weight:700;
@@ -138,10 +156,12 @@ header{
 }
 
 .nav-links a:hover{
+
     color:#a66b2f;
 }
 
 .cart-button{
+
     background:#4b2a18;
 
     color:white !important;
@@ -149,21 +169,27 @@ header{
     padding:13px 23px;
 
     border-radius:30px;
+
+    box-shadow:
+    0 7px 18px rgba(75,42,24,0.15);
 }
 
 
-/* ================= ORDER ================= */
+/* =========================
+   ORDER HERO
+========================= */
 
 .order-section{
 
     min-height:calc(100vh - 100px);
 
-    padding:75px 20px;
+    padding:80px 20px;
 
     background:
+
     linear-gradient(
-        rgba(75,42,24,.04),
-        rgba(166,107,47,.08)
+        rgba(63,36,21,0.06),
+        rgba(166,107,47,0.10)
     );
 }
 
@@ -181,10 +207,12 @@ header{
 
     text-align:center;
 
-    margin-bottom:40px;
+    margin-bottom:45px;
 }
 
 .order-label{
+
+    display:inline-block;
 
     color:#a66b2f;
 
@@ -194,59 +222,67 @@ header{
 
     letter-spacing:5px;
 
-    margin-bottom:12px;
+    margin-bottom:13px;
 }
 
 .order-title h1{
 
     font-family:Georgia,serif;
 
-    font-size:48px;
+    font-size:52px;
 
     color:#4b2a18;
 
-    margin-bottom:12px;
+    line-height:1.1;
+
+    margin-bottom:15px;
 }
 
 .order-title p{
 
     color:#876d5b;
 
-    font-size:16px;
+    font-size:17px;
 }
 
 
-/* CARD */
+/* =========================
+   ORDER CARD
+========================= */
 
 .order-card{
 
     background:#ffffff;
 
-    padding:40px;
+    padding:42px;
 
     border-radius:25px;
 
     border:1px solid #eedfce;
 
     box-shadow:
-    0 15px 40px rgba(75,42,24,.10);
+    0 15px 40px rgba(75,42,24,0.10);
 }
 
 
-/* FORM */
+/* =========================
+   FORM
+========================= */
 
 .form-group{
 
-    margin-bottom:22px;
+    margin-bottom:23px;
 }
 
 .form-group label{
 
     display:block;
 
+    color:#4b2a18;
+
     font-weight:800;
 
-    margin-bottom:8px;
+    margin-bottom:9px;
 }
 
 .form-group input,
@@ -255,7 +291,7 @@ header{
 
     width:100%;
 
-    padding:14px 16px;
+    padding:15px 16px;
 
     border:1px solid #dfcdbb;
 
@@ -284,21 +320,25 @@ header{
 
 .form-group textarea{
 
-    min-height:110px;
+    min-height:120px;
 
     resize:vertical;
 }
 
 
-/* ================= PAYMENT ================= */
+/* =========================
+   PAYMENT
+========================= */
 
 .payment-title{
 
+    font-size:20px;
+
     font-weight:900;
 
-    font-size:18px;
+    color:#4b2a18;
 
-    margin-bottom:12px;
+    margin-bottom:13px;
 }
 
 .payment-options{
@@ -314,9 +354,9 @@ header{
 
     align-items:center;
 
-    gap:10px;
+    gap:12px;
 
-    padding:17px;
+    padding:18px;
 
     border:1px solid #dfcdbb;
 
@@ -334,19 +374,25 @@ header{
     border-color:#a66b2f;
 
     background:#fdf2e5;
+
+    transform:translateY(-2px);
 }
 
 .payment-option input{
 
-    width:18px;
-    height:18px;
+    width:19px;
+    height:19px;
 
     accent-color:#4b2a18;
+}
 
+.payment-option span{
+
+    font-weight:700;
 }
 
 
-/* ONLINE PAYMENT BOX */
+/* ONLINE INFO */
 
 .online-box{
 
@@ -354,9 +400,9 @@ header{
 
     margin-top:15px;
 
-    padding:18px;
+    padding:20px;
 
-    border-radius:14px;
+    border-radius:15px;
 
     background:#f3e5d4;
 
@@ -367,22 +413,26 @@ header{
 
     font-family:Georgia,serif;
 
-    margin-bottom:8px;
+    font-size:21px;
 
     color:#4b2a18;
+
+    margin-bottom:8px;
 }
 
 .online-box p{
 
     color:#705b4b;
 
-    line-height:1.6;
+    line-height:1.7;
 
     font-size:14px;
 }
 
 
-/* BUTTON */
+/* =========================
+   ORDER BUTTON
+========================= */
 
 .order-btn{
 
@@ -394,7 +444,7 @@ header{
 
     color:white;
 
-    padding:16px;
+    padding:17px;
 
     border-radius:30px;
 
@@ -404,20 +454,25 @@ header{
 
     cursor:pointer;
 
-    margin-top:10px;
+    margin-top:8px;
 
     transition:.3s;
+
+    box-shadow:
+    0 8px 20px rgba(75,42,24,0.15);
 }
 
 .order-btn:hover{
 
     background:#2f190d;
 
-    transform:translateY(-2px);
+    transform:translateY(-3px);
 }
 
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 footer{
 
@@ -425,18 +480,46 @@ footer{
 
     color:white;
 
-    text-align:center;
+    padding:55px 20px 25px;
 
-    padding:30px 20px;
+    text-align:center;
+}
+
+.footer-title{
+
+    font-family:Georgia,serif;
+
+    color:#f1c58d;
+
+    font-size:22px;
+
+    margin-bottom:10px;
 }
 
 footer p{
 
     color:#cbb8a7;
+
+    line-height:1.7;
+}
+
+.copyright{
+
+    margin-top:25px;
+
+    padding-top:20px;
+
+    border-top:1px solid #4c3325;
+
+    color:#927c6b;
+
+    font-size:14px;
 }
 
 
-/* ================= MOBILE ================= */
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:750px){
 
@@ -460,17 +543,19 @@ footer p{
 
     .order-section{
 
-        padding:45px 15px;
+        padding:55px 15px;
     }
 
     .order-card{
 
-        padding:25px 20px;
+        padding:27px 20px;
+
+        border-radius:20px;
     }
 
     .order-title h1{
 
-        font-size:38px;
+        font-size:40px;
     }
 
 }
@@ -483,7 +568,9 @@ footer p{
 <body>
 
 
-<!-- ================= HEADER ================= -->
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
 
@@ -496,7 +583,7 @@ footer p{
 D
 </div>
 
-<div>
+<div class="logo-text">
 
 <span class="dst">
 DST
@@ -542,8 +629,16 @@ Order
 </li>
 
 <li>
-<a href="cart.html" class="cart-button">
+<a
+href="cart.html"
+class="cart-button">
+
 🛒 Cart
+
+<span id="cartCount">
+0
+</span>
+
 </a>
 </li>
 
@@ -555,7 +650,9 @@ Order
 
 
 
-<!-- ================= ORDER ================= -->
+<!-- =========================
+     ORDER SECTION
+========================= -->
 
 <section class="order-section">
 
@@ -628,7 +725,9 @@ required>
 Select Product
 </label>
 
-<select id="product" required>
+<select
+id="product"
+required>
 
 <option value="">
 -- Select Product --
@@ -757,20 +856,26 @@ value="Online Payment">
 </div>
 
 
-<!-- ONLINE PAYMENT MESSAGE -->
+<!-- ONLINE PAYMENT INFO -->
 
 <div
 class="online-box"
 id="onlineBox">
 
 <h3>
-💳 Online Payment
+💳 Secure Online Payment
 </h3>
 
 <p>
-After submitting your order,
-you will be taken to the secure
-online payment page.
+
+After you submit your order,
+you will be taken to our online
+payment page.
+
+Your payment information should
+only be entered on the official
+payment gateway page.
+
 </p>
 
 </div>
@@ -778,7 +883,7 @@ online payment page.
 </div>
 
 
-<!-- BUTTON -->
+<!-- SUBMIT -->
 
 <button
 type="submit"
@@ -799,22 +904,41 @@ class="order-btn">
 
 
 
-<!-- ================= FOOTER ================= -->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
+<div class="footer-title">
+DST RAWANA LANKA
+</div>
+
 <p>
-© 2026 DST RAWANA LANKA. All Rights Reserved.
+Fresh, delicious and quality products made for you.
 </p>
+
+<div class="copyright">
+
+© 2026 DST RAWANA LANKA.
+All Rights Reserved.
+
+</div>
 
 </footer>
 
 
 
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
 <script>
 
 
-/* PAYMENT DISPLAY */
+/* =========================
+   PAYMENT DISPLAY
+========================= */
 
 const paymentOptions =
 document.querySelectorAll(
@@ -858,7 +982,9 @@ option => {
 
 
 
-/* ORDER */
+/* =========================
+   ORDER SUBMIT
+========================= */
 
 document
 .getElementById("orderForm")
@@ -872,35 +998,58 @@ function(e){
     const name =
     document.getElementById(
         "name"
-    ).value;
+    ).value.trim();
+
 
     const phone =
     document.getElementById(
         "phone"
-    ).value;
+    ).value.trim();
+
 
     const product =
     document.getElementById(
         "product"
     ).value;
 
+
     const quantity =
     document.getElementById(
         "quantity"
     ).value;
 
+
     const address =
     document.getElementById(
         "address"
-    ).value;
+    ).value.trim();
 
-    const payment =
+
+    const selectedPayment =
     document.querySelector(
         'input[name="payment"]:checked'
-    ).value;
+    );
 
 
-    /* WHATSAPP */
+    if(!selectedPayment){
+
+        alert(
+            "Please select a payment method."
+        );
+
+        return;
+
+    }
+
+
+    const payment =
+    selectedPayment.value;
+
+
+
+    /* =========================
+       WHATSAPP MESSAGE
+    ========================= */
 
     const message =
 
@@ -925,6 +1074,7 @@ function(e){
     payment;
 
 
+
     const whatsappNumber =
     "94714881433";
 
@@ -938,10 +1088,10 @@ function(e){
     );
 
 
-    /*
+
+    /* =========================
        CASH ON DELIVERY
-       -> WhatsApp
-    */
+    ========================= */
 
     if(
         payment ===
@@ -954,38 +1104,100 @@ function(e){
         );
 
         return;
+
     }
 
 
-    /*
-       ONLINE PAYMENT
 
-       IMPORTANT:
-       මෙතනට පස්සේ
-       PayHere / WEBXPAY වගේ
-       real gateway එක connect කරන්න.
-    */
+    /* =========================
+       ONLINE PAYMENT
+    ========================= */
 
     if(
         payment ===
         "Online Payment"
     ){
 
-        alert(
-            "Online Payment selected. Payment gateway setup is required."
+        localStorage.setItem(
+
+            "pendingOrder",
+
+            JSON.stringify({
+
+                name:name,
+
+                phone:phone,
+
+                product:product,
+
+                quantity:quantity,
+
+                address:address,
+
+                payment:payment
+
+            })
+
         );
 
-        /*
-        Gateway එක connect කළාම
-        මෙතන payment page එක open කරමු.
-        */
+
+        window.location.href =
+        "payment.html";
 
     }
 
 });
 
+
+
+/* =========================
+   CART COUNT
+========================= */
+
+function updateCartCount(){
+
+    let cart =
+    JSON.parse(
+        localStorage.getItem("cart")
+    ) || [];
+
+
+    let count = 0;
+
+
+    cart.forEach(
+        item => {
+
+            count +=
+            Number(
+                item.quantity
+            ) || 0;
+
+        }
+    );
+
+
+    const cartCount =
+    document.getElementById(
+        "cartCount"
+    );
+
+
+    if(cartCount){
+
+        cartCount.innerText =
+        count;
+
+    }
+
+}
+
+
+updateCartCount();
+
 </script>
 
 
 </body>
+
 </html>
