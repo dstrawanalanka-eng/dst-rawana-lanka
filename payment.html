@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Online Payment | DST RAWANA LANKA</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#fffaf3;
+    color:#4b2a18;
+}
+
+header{
+    background:white;
+    box-shadow:0 3px 15px rgba(75,42,24,.1);
+}
+
+.navbar{
+    max-width:1400px;
+    margin:auto;
+    padding:18px 40px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:13px;
+    text-decoration:none;
+}
+
+.logo-box{
+    width:58px;
+    height:58px;
+
+    background:#4b2a18;
+    color:white;
+
+    border-radius:17px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:27px;
+    font-weight:900;
+}
+
+.dst{
+    display:block;
+    font-size:20px;
+    font-weight:900;
+    color:#3d2416;
+}
+
+.rawana{
+    font-size:22px;
+    font-weight:900;
+    color:#a66b2f;
+}
+
+.lanka{
+    font-size:22px;
+    font-weight:900;
+    color:#3d2416;
+    margin-left:5px;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#4b2a18;
+    font-weight:700;
+}
+
+.cart{
+    background:#4b2a18;
+    color:white !important;
+    padding:13px 22px;
+    border-radius:30px;
+}
+
+.payment-section{
+    min-height:calc(100vh - 100px);
+    padding:70px 20px;
+}
+
+.container{
+    max-width:700px;
+    margin:auto;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.label{
+    color:#a66b2f;
+    font-weight:900;
+    letter-spacing:5px;
+    margin-bottom:12px;
+}
+
+.title h1{
+    font-family:Georgia,serif;
+    font-size:46px;
+}
+
+.title p{
+    margin-top:10px;
+    color:#876d5b;
+}
+
+.payment-card{
+    background:white;
+    padding:40px;
+
+    border-radius:25px;
+
+    border:1px solid #eedfce;
+
+    box-shadow:0 15px 40px rgba(75,42,24,.1);
+}
+
+.payment-method{
+    border:1px solid #dfcdbb;
+    border-radius:15px;
+
+    padding:20px;
+    margin-bottom:15px;
+
+    background:#fffaf3;
+}
+
+.payment-method h3{
+    margin-bottom:8px;
+}
+
+.payment-method p{
+    color:#705b4b;
+    line-height:1.6;
+}
+
+.pay-button{
+    width:100%;
+    border:0;
+
+    background:#4b2a18;
+    color:white;
+
+    padding:16px;
+
+    border-radius:30px;
+
+    font-size:16px;
+    font-weight:900;
+
+    cursor:pointer;
+
+    margin-top:15px;
+}
+
+.pay-button:hover{
+    background:#2f190d;
+}
+
+.note{
+    margin-top:20px;
+    padding:15px;
+
+    background:#f3e5d4;
+
+    border-radius:12px;
+
+    color:#705b4b;
+
+    font-size:14px;
+    line-height:1.6;
+}
+
+footer{
+    background:#29160d;
+    color:#cbb8a7;
+    text-align:center;
+    padding:30px;
+}
+
+@media(max-width:750px){
+
+    .navbar{
+        flex-direction:column;
+        gap:20px;
+        padding:20px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .payment-card{
+        padding:25px 20px;
+    }
+
+    .title h1{
+        font-size:38px;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<header>
+
+<nav class="navbar">
+
+<a href="index.html" class="logo">
+
+<div class="logo-box">D</div>
+
+<div>
+
+<span class="dst">DST</span>
+<span class="rawana">RAWANA</span>
+<span class="lanka">LANKA</span>
+
+</div>
+
+</a>
+
+<ul class="nav-links">
+
+<li>
+<a href="index.html">Home</a>
+</li>
+
+<li>
+<a href="products.html">Products</a>
+</li>
+
+<li>
+<a href="about.html">About</a>
+</li>
+
+<li>
+<a href="order.html">Order</a>
+</li>
+
+<li>
+<a href="cart.html" class="cart">🛒 Cart</a>
+</li>
+
+</ul>
+
+</nav>
+
+</header>
+
+
+<section class="payment-section">
+
+<div class="container">
+
+<div class="title">
+
+<div class="label">
+DST RAWANA LANKA
+</div>
+
+<h1>Online Payment</h1>
+
+<p>Secure payment for your order</p>
+
+</div>
+
+
+<div class="payment-card">
+
+<div class="payment-method">
+
+<h3>💳 Online Payment</h3>
+
+<p>
+Online payment will be available here
+once a payment gateway is connected.
+</p>
+
+</div>
+
+
+<button
+class="pay-button"
+onclick="startPayment()">
+
+💳 Continue to Payment
+
+</button>
+
+
+<div class="note">
+
+<strong>Payment Security</strong><br>
+
+Your payment details should only be
+entered on the official payment
+gateway page. Do not enter card
+details directly into this website.
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+© 2026 DST RAWANA LANKA. All Rights Reserved.
+
+</footer>
+
+
+<script>
+
+function startPayment(){
+
+    alert(
+        "Online Payment gateway is not connected yet. Please use Cash on Delivery until the payment gateway is set up."
+    );
+
+}
+
+</script>
+
+</body>
+</html>

@@ -4,200 +4,249 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>DST RAWANA LANKA | Order</title>
-
-<link rel="stylesheet" href="css/style.css">
+<title>Order | DST RAWANA LANKA</title>
 
 <style>
 
-/* ================= ORDER PAGE ================= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-.order-hero{
-    min-height:430px;
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#fffaf3;
+    color:#4b2a18;
+}
+
+
+/* ================= HEADER ================= */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:9999;
+
+    background:#ffffff;
+
+    box-shadow:
+    0 3px 15px rgba(75,42,24,0.10);
+}
+
+.navbar{
+    max-width:1400px;
+    min-height:100px;
+
+    margin:auto;
+    padding:18px 40px;
 
     display:flex;
     align-items:center;
-    justify-content:center;
-
-    text-align:center;
-    color:white;
-
-    background:
-    linear-gradient(
-        rgba(63,36,21,.68),
-        rgba(63,36,21,.68)
-    ),
-    url("images/hero.jpg");
-
-    background-size:cover;
-    background-position:center;
-}
-
-.order-hero-content{
-    max-width:750px;
-    padding:30px;
-}
-
-.order-label{
-    color:#f1c58d;
-    font-size:14px;
-    font-weight:900;
-    letter-spacing:5px;
-}
-
-.order-hero h1{
-    font-family:Georgia,serif;
-    font-size:64px;
-    margin:20px 0;
-}
-
-.order-hero p{
-    color:#f8eee3;
-    font-size:18px;
-    line-height:1.7;
+    justify-content:space-between;
 }
 
 
-/* ================= ORDER SECTION ================= */
+/* LOGO */
 
-.order-section{
-    padding:90px 25px;
-    background:#fffaf3;
+.logo{
+    display:flex;
+    align-items:center;
+    gap:14px;
+
+    text-decoration:none;
 }
 
-.order-container{
-    max-width:1150px;
-    margin:auto;
+.logo-box{
+    width:58px;
+    height:58px;
 
-    display:grid;
-    grid-template-columns:1fr 1.3fr;
-
-    gap:35px;
-
-    align-items:start;
-}
-
-
-/* ================= INFO CARD ================= */
-
-.order-info{
     background:#4b2a18;
     color:white;
 
-    padding:45px 35px;
-
-    border-radius:25px;
-
-    box-shadow:
-    0 15px 35px rgba(75,42,24,.15);
-}
-
-.order-info-label{
-    color:#f1c58d;
-    font-size:13px;
-    font-weight:900;
-    letter-spacing:4px;
-}
-
-.order-info h2{
-    font-family:Georgia,serif;
-    font-size:38px;
-    margin:15px 0 20px;
-}
-
-.order-info p{
-    color:#eadbca;
-    line-height:1.8;
-    margin-bottom:25px;
-}
-
-.order-features{
-    display:flex;
-    flex-direction:column;
-    gap:18px;
-}
-
-.order-feature{
-    display:flex;
-    align-items:center;
-    gap:15px;
-}
-
-.order-feature-icon{
-    width:50px;
-    height:50px;
-
-    border-radius:50%;
-
-    background:#f1c58d;
-    color:#4b2a18;
+    border-radius:17px;
 
     display:flex;
     align-items:center;
     justify-content:center;
 
-    font-size:22px;
+    font-size:27px;
+    font-weight:900;
 }
 
-.order-feature-text strong{
+.logo-text{
+    line-height:.9;
+}
+
+.dst{
     display:block;
-    margin-bottom:4px;
+
+    font-size:20px;
+    font-weight:900;
+
+    color:#3d2416;
+
+    letter-spacing:1px;
 }
 
-.order-feature-text span{
-    color:#cbb8a7;
-    font-size:13px;
+.rawana{
+    font-size:22px;
+    font-weight:900;
+
+    color:#a66b2f;
+
+    letter-spacing:1px;
+}
+
+.lanka{
+    font-size:22px;
+    font-weight:900;
+
+    color:#3d2416;
+
+    margin-left:5px;
+
+    letter-spacing:1px;
 }
 
 
-/* ================= FORM CARD ================= */
+/* NAV */
 
-.order-form-card{
-    background:white;
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:28px;
 
-    border:1px solid #eedfce;
+    list-style:none;
+}
 
-    border-radius:25px;
+.nav-links a{
+    color:#4b2a18;
+
+    text-decoration:none;
+
+    font-size:15px;
+    font-weight:700;
+
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#a66b2f;
+}
+
+.cart-button{
+    background:#4b2a18;
+
+    color:white !important;
+
+    padding:13px 23px;
+
+    border-radius:30px;
+}
+
+
+/* ================= ORDER ================= */
+
+.order-section{
+
+    min-height:calc(100vh - 100px);
+
+    padding:75px 20px;
+
+    background:
+    linear-gradient(
+        rgba(75,42,24,.04),
+        rgba(166,107,47,.08)
+    );
+}
+
+.order-container{
+
+    max-width:850px;
+
+    margin:auto;
+}
+
+
+/* TITLE */
+
+.order-title{
+
+    text-align:center;
+
+    margin-bottom:40px;
+}
+
+.order-label{
+
+    color:#a66b2f;
+
+    font-size:14px;
+
+    font-weight:900;
+
+    letter-spacing:5px;
+
+    margin-bottom:12px;
+}
+
+.order-title h1{
+
+    font-family:Georgia,serif;
+
+    font-size:48px;
+
+    color:#4b2a18;
+
+    margin-bottom:12px;
+}
+
+.order-title p{
+
+    color:#876d5b;
+
+    font-size:16px;
+}
+
+
+/* CARD */
+
+.order-card{
+
+    background:#ffffff;
 
     padding:40px;
 
+    border-radius:25px;
+
+    border:1px solid #eedfce;
+
     box-shadow:
-    0 10px 30px rgba(75,42,24,.08);
-}
-
-.order-form-card h2{
-    font-family:Georgia,serif;
-    font-size:34px;
-    margin-bottom:8px;
-}
-
-.order-form-card > p{
-    color:#927c6b;
-    margin-bottom:30px;
+    0 15px 40px rgba(75,42,24,.10);
 }
 
 
-/* ================= FORM ================= */
-
-.order-form{
-    display:flex;
-    flex-direction:column;
-    gap:18px;
-}
+/* FORM */
 
 .form-group{
-    display:flex;
-    flex-direction:column;
-    gap:8px;
+
+    margin-bottom:22px;
 }
 
 .form-group label{
-    font-size:14px;
+
+    display:block;
+
     font-weight:800;
-    color:#4b2a18;
+
+    margin-bottom:8px;
 }
 
 .form-group input,
@@ -208,15 +257,13 @@
 
     padding:14px 16px;
 
-    border:1px solid #dfcdb9;
+    border:1px solid #dfcdbb;
 
     border-radius:12px;
 
     background:#fffaf3;
 
     color:#4b2a18;
-
-    font-family:Arial, sans-serif;
 
     font-size:15px;
 
@@ -236,23 +283,110 @@
 }
 
 .form-group textarea{
+
+    min-height:110px;
+
     resize:vertical;
-    min-height:100px;
 }
 
 
-/* TWO COLUMNS */
+/* ================= PAYMENT ================= */
 
-.form-row{
+.payment-title{
+
+    font-weight:900;
+
+    font-size:18px;
+
+    margin-bottom:12px;
+}
+
+.payment-options{
+
     display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:18px;
+
+    gap:12px;
+}
+
+.payment-option{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:17px;
+
+    border:1px solid #dfcdbb;
+
+    border-radius:14px;
+
+    background:#fffaf3;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.payment-option:hover{
+
+    border-color:#a66b2f;
+
+    background:#fdf2e5;
+}
+
+.payment-option input{
+
+    width:18px;
+    height:18px;
+
+    accent-color:#4b2a18;
+
 }
 
 
-/* ORDER BUTTON */
+/* ONLINE PAYMENT BOX */
 
-.order-submit{
+.online-box{
+
+    display:none;
+
+    margin-top:15px;
+
+    padding:18px;
+
+    border-radius:14px;
+
+    background:#f3e5d4;
+
+    border:1px solid #dfcdbb;
+}
+
+.online-box h3{
+
+    font-family:Georgia,serif;
+
+    margin-bottom:8px;
+
+    color:#4b2a18;
+}
+
+.online-box p{
+
+    color:#705b4b;
+
+    line-height:1.6;
+
+    font-size:14px;
+}
+
+
+/* BUTTON */
+
+.order-btn{
+
+    width:100%;
 
     border:none;
 
@@ -270,103 +404,73 @@
 
     cursor:pointer;
 
-    transition:.3s;
+    margin-top:10px;
 
-    margin-top:5px;
+    transition:.3s;
 }
 
-.order-submit:hover{
+.order-btn:hover{
 
     background:#2f190d;
 
     transform:translateY(-2px);
-
-    box-shadow:
-    0 8px 20px rgba(75,42,24,.18);
 }
 
 
-/* ================= SUCCESS MESSAGE ================= */
+/* FOOTER */
 
-.order-success{
+footer{
 
-    display:none;
+    background:#29160d;
 
-    margin-top:20px;
-
-    padding:15px;
-
-    border-radius:12px;
-
-    background:#f3e5d4;
-
-    color:#4b2a18;
-
-    font-weight:700;
+    color:white;
 
     text-align:center;
+
+    padding:30px 20px;
+}
+
+footer p{
+
+    color:#cbb8a7;
 }
 
 
-/* ================= ORDER NOTE ================= */
+/* ================= MOBILE ================= */
 
-.order-note{
+@media(max-width:750px){
 
-    margin-top:20px;
+    .navbar{
 
-    padding:15px;
+        flex-direction:column;
 
-    background:#fffaf3;
+        gap:20px;
 
-    border-left:4px solid #a66b2f;
-
-    color:#705b4b;
-
-    font-size:13px;
-
-    line-height:1.6;
-}
-
-
-/* ================= RESPONSIVE ================= */
-
-@media(max-width:850px){
-
-    .order-container{
-        grid-template-columns:1fr;
+        padding:20px;
     }
 
-    .order-hero h1{
-        font-size:48px;
+    .nav-links{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:13px;
     }
-
-}
-
-
-@media(max-width:600px){
 
     .order-section{
-        padding:60px 18px;
+
+        padding:45px 15px;
     }
 
-    .order-form-card{
+    .order-card{
+
         padding:25px 20px;
     }
 
-    .order-info{
-        padding:35px 25px;
-    }
+    .order-title h1{
 
-    .form-row{
-        grid-template-columns:1fr;
-    }
-
-    .order-hero{
-        min-height:360px;
-    }
-
-    .order-hero h1{
-        font-size:40px;
+        font-size:38px;
     }
 
 }
@@ -392,7 +496,7 @@
 D
 </div>
 
-<div class="logo-text">
+<div>
 
 <span class="dst">
 DST
@@ -432,20 +536,14 @@ About
 </li>
 
 <li>
-<a href="index.html#gallery">
-Gallery
-</a>
-</li>
-
-<li>
-<a href="order.html" class="active">
+<a href="order.html">
 Order
 </a>
 </li>
 
 <li>
 <a href="cart.html" class="cart-button">
-🛒 Cart <span id="cartCount">0</span>
+🛒 Cart
 </a>
 </li>
 
@@ -457,142 +555,38 @@ Order
 
 
 
-<!-- ================= HERO ================= -->
-
-<section class="order-hero">
-
-<div class="order-hero-content">
-
-<span class="order-label">
-DST RAWANA LANKA
-</span>
-
-<h1>
-Place Your Order
-</h1>
-
-<p>
-Choose your favourite products and
-send us your order easily.
-</p>
-
-</div>
-
-</section>
-
-
-
-<!-- ================= ORDER AREA ================= -->
+<!-- ================= ORDER ================= -->
 
 <section class="order-section">
 
 <div class="order-container">
 
 
-<!-- LEFT -->
+<div class="order-title">
 
-<div class="order-info">
+<div class="order-label">
+DST RAWANA LANKA
+</div>
 
-<span class="order-info-label">
-ORDER WITH US
-</span>
-
-<h2>
-Fresh Products.<br>
-Easy Ordering.
-</h2>
+<h1>
+Place Your Order
+</h1>
 
 <p>
-Select the product you want, enter your
-details and send your order to
-DST RAWANA LANKA.
+Fresh products. Easy ordering.
 </p>
 
-
-<div class="order-features">
-
-
-<div class="order-feature">
-
-<div class="order-feature-icon">
-🥛
-</div>
-
-<div class="order-feature-text">
-
-<strong>Fresh Products</strong>
-
-<span>
-Quality products made with care
-</span>
-
-</div>
-
-</div>
-
-
-<div class="order-feature">
-
-<div class="order-feature-icon">
-📦
-</div>
-
-<div class="order-feature-text">
-
-<strong>Easy Ordering</strong>
-
-<span>
-Simple and quick order process
-</span>
-
-</div>
-
-</div>
-
-
-<div class="order-feature">
-
-<div class="order-feature-icon">
-📞
-</div>
-
-<div class="order-feature-text">
-
-<strong>Contact Us</strong>
-
-<span>
-+94 71 488 1433
-</span>
-
-</div>
-
-</div>
-
-
-</div>
-
 </div>
 
 
 
-<!-- RIGHT FORM -->
-
-<div class="order-form-card">
-
-<h2>
-Order Now
-</h2>
-
-<p>
-Fill in your details to place an order.
-</p>
+<div class="order-card">
 
 
-<form
-class="order-form"
-id="orderForm"
->
+<form id="orderForm">
 
+
+<!-- NAME -->
 
 <div class="form-group">
 
@@ -602,17 +596,14 @@ Full Name
 
 <input
 type="text"
-id="customerName"
-placeholder="Enter your name"
-required
->
+id="name"
+placeholder="Enter your full name"
+required>
 
 </div>
 
 
-
-<div class="form-row">
-
+<!-- PHONE -->
 
 <div class="form-group">
 
@@ -624,32 +615,12 @@ Phone Number
 type="tel"
 id="phone"
 placeholder="07XXXXXXXX"
-required
->
+required>
 
 </div>
 
 
-<div class="form-group">
-
-<label>
-Quantity
-</label>
-
-<input
-type="number"
-id="quantity"
-min="1"
-value="1"
-required
->
-
-</div>
-
-
-</div>
-
-
+<!-- PRODUCT -->
 
 <div class="form-group">
 
@@ -660,46 +631,46 @@ Select Product
 <select id="product" required>
 
 <option value="">
--- Select a Product --
+-- Select Product --
 </option>
 
-<option value="Yoghurt">
+<option>
 🥛 Yoghurt - Rs. 80.00
 </option>
 
-<option value="Fruit Drink">
+<option>
 🍹 Fruit Drink - Rs. 160.00
 </option>
 
-<option value="Butter">
+<option>
 🧈 Butter - Rs. 2750.00
 </option>
 
-<option value="Ghee">
+<option>
 🥛 Ghee - Rs. 4500.00
 </option>
 
-<option value="Jelly Yoghurt">
+<option>
 🍮 Jelly Yoghurt - Rs. 80.00
 </option>
 
-<option value="Aloe Vera Drink">
+<option>
 🌿 Aloe Vera Drink - Rs. 150.00
 </option>
 
-<option value="Passion Drink">
+<option>
 💜 Passion Drink - Rs. 150.00
 </option>
 
-<option value="Mango Fruit Drink">
+<option>
 🥭 Mango Fruit Drink - Rs. 150.00
 </option>
 
-<option value="Lime Drink">
+<option>
 🍋 Lime Drink - Rs. 150.00
 </option>
 
-<option value="Mix Fruit Drink">
+<option>
 🍹 Mix Fruit Drink - Rs. 150.00
 </option>
 
@@ -708,6 +679,25 @@ Select Product
 </div>
 
 
+<!-- QUANTITY -->
+
+<div class="form-group">
+
+<label>
+Quantity
+</label>
+
+<input
+type="number"
+id="quantity"
+value="1"
+min="1"
+required>
+
+</div>
+
+
+<!-- ADDRESS -->
 
 <div class="form-group">
 
@@ -717,56 +707,86 @@ Delivery Address
 
 <textarea
 id="address"
-placeholder="Enter your delivery address"
-required
-></textarea>
+placeholder="Enter your complete delivery address"
+required></textarea>
 
 </div>
 
 
+<!-- PAYMENT -->
 
 <div class="form-group">
 
-<label>
-Additional Note
+<div class="payment-title">
+Payment Method
+</div>
+
+
+<div class="payment-options">
+
+
+<label class="payment-option">
+
+<input
+type="radio"
+name="payment"
+value="Cash on Delivery"
+required>
+
+<span>
+💵 Cash on Delivery
+</span>
+
 </label>
 
-<textarea
-id="note"
-placeholder="Any special request? (Optional)"
-></textarea>
+
+<label class="payment-option">
+
+<input
+type="radio"
+name="payment"
+value="Online Payment">
+
+<span>
+💳 Online Payment
+</span>
+
+</label>
+
 
 </div>
 
 
+<!-- ONLINE PAYMENT MESSAGE -->
+
+<div
+class="online-box"
+id="onlineBox">
+
+<h3>
+💳 Online Payment
+</h3>
+
+<p>
+After submitting your order,
+you will be taken to the secure
+online payment page.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- BUTTON -->
 
 <button
 type="submit"
-class="order-submit"
->
+class="order-btn">
 
-📦 Send Order
+📦 Place Order
 
 </button>
-
-
-<div
-class="order-success"
-id="orderSuccess"
->
-
-✓ Your order is ready to send!
-
-</div>
-
-
-<div class="order-note">
-
-📌 After submitting your order,
-please contact us on WhatsApp or phone
-to confirm your order.
-
-</div>
 
 
 </form>
@@ -783,202 +803,184 @@ to confirm your order.
 
 <footer>
 
-<div class="footer-container">
-
-
-<div class="footer-box">
-
-<h3>
-DST RAWANA LANKA
-</h3>
-
 <p>
-Fresh, delicious and quality
-products made for you.
+© 2026 DST RAWANA LANKA. All Rights Reserved.
 </p>
-
-</div>
-
-
-<div class="footer-box">
-
-<h3>
-Quick Links
-</h3>
-
-<a href="index.html">
-Home
-</a>
-
-<a href="products.html">
-Products
-</a>
-
-<a href="about.html">
-About
-</a>
-
-<a href="index.html#gallery">
-Gallery
-</a>
-
-<a href="order.html">
-Order
-</a>
-
-<a href="cart.html">
-Cart
-</a>
-
-</div>
-
-
-<div class="footer-box">
-
-<h3>
-Contact
-</h3>
-
-<p>
-📞 +94 71 488 1433
-</p>
-
-<p>
-📍 Sri Lanka
-</p>
-
-</div>
-
-
-</div>
-
-
-<div class="copyright">
-
-© 2026 DST RAWANA LANKA.
-All Rights Reserved.
-
-</div>
 
 </footer>
 
 
 
-<!-- ================= CART COUNT ================= -->
-
 <script>
 
-let cart =
-JSON.parse(localStorage.getItem("cart")) || [];
+
+/* PAYMENT DISPLAY */
+
+const paymentOptions =
+document.querySelectorAll(
+'input[name="payment"]'
+);
+
+const onlineBox =
+document.getElementById(
+"onlineBox"
+);
 
 
-function updateCartCount(){
+paymentOptions.forEach(
+option => {
 
-let count = 0;
+    option.addEventListener(
+        "change",
+        function(){
 
-cart.forEach(item => {
+            if(
+                this.value ===
+                "Online Payment"
+            ){
 
-count += item.quantity;
+                onlineBox.style.display =
+                "block";
+
+            }
+
+            else{
+
+                onlineBox.style.display =
+                "none";
+
+            }
+
+        }
+    );
 
 });
 
 
-const cartCount =
-document.getElementById("cartCount");
 
+/* ORDER */
 
-if(cartCount){
-
-cartCount.innerText = count;
-
-}
-
-}
-
-updateCartCount();
-
-</script>
-
-
-
-<!-- ================= ORDER ================= -->
-
-<script>
-
-const orderForm =
-document.getElementById("orderForm");
-
-
-orderForm.addEventListener(
+document
+.getElementById("orderForm")
+.addEventListener(
 "submit",
 function(e){
 
-e.preventDefault();
+    e.preventDefault();
 
 
-const name =
-document.getElementById("customerName").value;
+    const name =
+    document.getElementById(
+        "name"
+    ).value;
 
-const phone =
-document.getElementById("phone").value;
+    const phone =
+    document.getElementById(
+        "phone"
+    ).value;
 
-const product =
-document.getElementById("product").value;
+    const product =
+    document.getElementById(
+        "product"
+    ).value;
 
-const quantity =
-document.getElementById("quantity").value;
+    const quantity =
+    document.getElementById(
+        "quantity"
+    ).value;
 
-const address =
-document.getElementById("address").value;
+    const address =
+    document.getElementById(
+        "address"
+    ).value;
 
-const note =
-document.getElementById("note").value;
-
-
-const whatsappNumber =
-"94714881433";
-
-
-const message =
-
-`🛒 *DST RAWANA LANKA ORDER*
-
-👤 Name: ${name}
-
-📞 Phone: ${phone}
-
-🥛 Product: ${product}
-
-🔢 Quantity: ${quantity}
-
-📍 Address: ${address}
-
-📝 Note: ${note || "No additional note"}
-
-Thank you!`;
+    const payment =
+    document.querySelector(
+        'input[name="payment"]:checked'
+    ).value;
 
 
-const whatsappURL =
-"https://wa.me/" +
-whatsappNumber +
-"?text=" +
-encodeURIComponent(message);
+    /* WHATSAPP */
+
+    const message =
+
+    "🛒 DST RAWANA LANKA ORDER\n\n" +
+
+    "👤 Name: " +
+    name +
+
+    "\n📞 Phone: " +
+    phone +
+
+    "\n📦 Product: " +
+    product +
+
+    "\n🔢 Quantity: " +
+    quantity +
+
+    "\n📍 Address: " +
+    address +
+
+    "\n💳 Payment: " +
+    payment;
 
 
-document.getElementById(
-"orderSuccess"
-).style.display = "block";
+    const whatsappNumber =
+    "94714881433";
 
 
-setTimeout(function(){
+    const whatsappURL =
+    "https://wa.me/" +
+    whatsappNumber +
+    "?text=" +
+    encodeURIComponent(
+        message
+    );
 
-window.open(
-whatsappURL,
-"_blank"
-);
 
-},500);
+    /*
+       CASH ON DELIVERY
+       -> WhatsApp
+    */
 
+    if(
+        payment ===
+        "Cash on Delivery"
+    ){
+
+        window.open(
+            whatsappURL,
+            "_blank"
+        );
+
+        return;
+    }
+
+
+    /*
+       ONLINE PAYMENT
+
+       IMPORTANT:
+       මෙතනට පස්සේ
+       PayHere / WEBXPAY වගේ
+       real gateway එක connect කරන්න.
+    */
+
+    if(
+        payment ===
+        "Online Payment"
+    ){
+
+        alert(
+            "Online Payment selected. Payment gateway setup is required."
+        );
+
+        /*
+        Gateway එක connect කළාම
+        මෙතන payment page එක open කරමු.
+        */
+
+    }
 
 });
 
@@ -986,5 +988,4 @@ whatsappURL,
 
 
 </body>
-
 </html>
