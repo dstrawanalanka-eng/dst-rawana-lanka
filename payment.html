@@ -10,18 +10,10 @@
 
 <style>
 
-/* =========================
-   RESET
-========================= */
-
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
 }
 
 body{
@@ -30,28 +22,17 @@ body{
     color:#4b2a18;
 }
 
-
-/* =========================
-   HEADER
-========================= */
+/* HEADER */
 
 header{
-    position:sticky;
-    top:0;
-    z-index:9999;
-
     background:#ffffff;
-
-    box-shadow:
-    0 3px 15px rgba(75,42,24,0.10);
+    box-shadow:0 3px 15px rgba(75,42,24,.10);
 }
 
 .navbar{
-
     max-width:1400px;
-    min-height:100px;
-
     margin:auto;
+    min-height:100px;
     padding:18px 40px;
 
     display:flex;
@@ -59,20 +40,14 @@ header{
     justify-content:space-between;
 }
 
-
-/* LOGO */
-
 .logo{
-
     display:flex;
     align-items:center;
     gap:14px;
-
     text-decoration:none;
 }
 
 .logo-box{
-
     width:58px;
     height:58px;
 
@@ -87,493 +62,202 @@ header{
 
     font-size:27px;
     font-weight:900;
-
-    box-shadow:
-    0 8px 18px rgba(75,42,24,0.18);
-}
-
-.logo-text{
-    line-height:.9;
 }
 
 .dst{
-
     display:block;
-
     font-size:20px;
     font-weight:900;
-
     color:#3d2416;
-
-    letter-spacing:1px;
 }
 
 .rawana{
-
     font-size:22px;
     font-weight:900;
-
     color:#a66b2f;
-
-    letter-spacing:1px;
 }
 
 .lanka{
-
     font-size:22px;
     font-weight:900;
-
     color:#3d2416;
-
     margin-left:5px;
-
-    letter-spacing:1px;
 }
 
-
-/* NAVIGATION */
-
 .nav-links{
-
     display:flex;
     align-items:center;
-
     gap:28px;
-
     list-style:none;
 }
 
 .nav-links a{
-
     text-decoration:none;
-
     color:#4b2a18;
-
-    font-size:15px;
     font-weight:700;
-
-    transition:.3s;
-}
-
-.nav-links a:hover{
-
-    color:#a66b2f;
 }
 
 .cart-button{
-
     background:#4b2a18;
-
     color:white !important;
-
     padding:13px 23px;
-
     border-radius:30px;
-
-    box-shadow:
-    0 7px 18px rgba(75,42,24,0.15);
 }
 
-
-/* =========================
-   PAYMENT SECTION
-========================= */
+/* PAYMENT */
 
 .payment-section{
-
     min-height:calc(100vh - 100px);
-
-    padding:80px 20px;
+    padding:70px 20px;
 
     background:
-
     linear-gradient(
-        rgba(63,36,21,0.04),
-        rgba(166,107,47,0.10)
+        rgba(75,42,24,.04),
+        rgba(166,107,47,.08)
     );
 }
 
-.payment-container{
-
-    max-width:850px;
-
+.container{
+    max-width:700px;
     margin:auto;
 }
 
-
-/* TITLE */
-
-.payment-title{
-
+.title{
     text-align:center;
-
-    margin-bottom:45px;
+    margin-bottom:35px;
 }
 
-.payment-label{
-
-    display:inline-block;
-
+.label{
     color:#a66b2f;
-
     font-size:14px;
-
     font-weight:900;
-
     letter-spacing:5px;
-
-    margin-bottom:13px;
+    margin-bottom:12px;
 }
 
-.payment-title h1{
-
+.title h1{
     font-family:Georgia,serif;
-
-    font-size:52px;
-
+    font-size:48px;
     color:#4b2a18;
-
-    margin-bottom:14px;
 }
 
-.payment-title p{
-
+.title p{
+    margin-top:10px;
     color:#876d5b;
-
-    font-size:17px;
 }
-
-
-/* =========================
-   PAYMENT CARD
-========================= */
 
 .payment-card{
-
-    background:#ffffff;
-
-    padding:42px;
+    background:white;
+    padding:40px;
 
     border-radius:25px;
 
     border:1px solid #eedfce;
 
     box-shadow:
-    0 15px 40px rgba(75,42,24,0.10);
+    0 15px 40px rgba(75,42,24,.10);
 }
 
-
-/* =========================
-   ORDER SUMMARY
-========================= */
-
-.summary-title{
-
-    font-family:Georgia,serif;
-
-    font-size:25px;
-
-    color:#4b2a18;
-
-    margin-bottom:20px;
-}
-
-.order-details{
-
+.order-summary{
     background:#fffaf3;
-
     border:1px solid #dfcdbb;
-
-    border-radius:16px;
-
+    border-radius:15px;
     padding:20px;
-
-    margin-bottom:25px;
-}
-
-.detail-row{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    gap:20px;
-
-    padding:12px 0;
-
-    border-bottom:1px solid #eedfce;
-}
-
-.detail-row:last-child{
-
-    border-bottom:none;
-}
-
-.detail-label{
-
-    font-weight:800;
-
-    color:#705b4b;
-}
-
-.detail-value{
-
-    text-align:right;
-
-    font-weight:700;
-
-    color:#4b2a18;
-}
-
-
-/* =========================
-   PAYMENT METHOD
-========================= */
-
-.payment-method{
-
-    background:#f3e5d4;
-
-    border:1px solid #dfcdbb;
-
-    border-radius:16px;
-
-    padding:22px;
-
     margin-bottom:20px;
 }
 
-.payment-method h3{
-
-    font-family:Georgia,serif;
-
-    font-size:23px;
-
-    color:#4b2a18;
-
-    margin-bottom:10px;
+.order-summary h3{
+    margin-bottom:15px;
 }
 
-.payment-method p{
-
-    color:#705b4b;
-
-    line-height:1.7;
-
-    font-size:15px;
-}
-
-
-/* =========================
-   SECURITY
-========================= */
-
-.security-box{
-
+.summary-row{
     display:flex;
-
-    align-items:flex-start;
-
-    gap:15px;
-
-    padding:20px;
-
-    border:1px solid #eedfce;
-
-    border-radius:15px;
-
-    background:#ffffff;
-
-    margin-bottom:25px;
+    justify-content:space-between;
+    padding:8px 0;
 }
 
-.security-icon{
+.total{
+    border-top:1px solid #dfcdbb;
+    margin-top:10px;
+    padding-top:15px;
 
-    font-size:30px;
+    font-size:20px;
+    font-weight:900;
 }
 
-.security-text h3{
-
-    color:#4b2a18;
-
-    margin-bottom:6px;
+.total span{
+    color:#a66b2f;
 }
 
-.security-text p{
-
-    color:#705b4b;
-
-    font-size:14px;
-
-    line-height:1.6;
-}
-
-
-/* =========================
-   BUTTONS
-========================= */
-
-.payment-btn{
-
+.pay-button{
     width:100%;
 
     border:none;
 
     background:#4b2a18;
-
     color:white;
 
-    padding:17px;
+    padding:16px;
 
     border-radius:30px;
 
     font-size:16px;
-
     font-weight:900;
 
     cursor:pointer;
 
     transition:.3s;
-
-    margin-bottom:12px;
 }
 
-.payment-btn:hover{
-
+.pay-button:hover{
     background:#2f190d;
-
-    transform:translateY(-3px);
-}
-
-.back-btn{
-
-    display:block;
-
-    width:100%;
-
-    text-align:center;
-
-    text-decoration:none;
-
-    background:#f1c58d;
-
-    color:#4b2a18;
-
-    padding:15px;
-
-    border-radius:30px;
-
-    font-weight:900;
-
-    transition:.3s;
-}
-
-.back-btn:hover{
-
-    background:#e6b875;
-
     transform:translateY(-2px);
 }
 
+.note{
+    margin-top:20px;
 
-/* =========================
-   FOOTER
-========================= */
+    padding:15px;
 
-footer{
+    background:#f3e5d4;
 
-    background:#29160d;
+    border-radius:12px;
 
-    color:white;
-
-    padding:55px 20px 25px;
-
-    text-align:center;
-}
-
-.footer-title{
-
-    font-family:Georgia,serif;
-
-    color:#f1c58d;
-
-    font-size:22px;
-
-    margin-bottom:10px;
-}
-
-footer p{
-
-    color:#cbb8a7;
-
-    line-height:1.7;
-}
-
-.copyright{
-
-    margin-top:25px;
-
-    padding-top:20px;
-
-    border-top:1px solid #4c3325;
-
-    color:#927c6b;
+    color:#705b4b;
 
     font-size:14px;
+    line-height:1.6;
 }
 
+footer{
+    background:#29160d;
+    color:#cbb8a7;
+    text-align:center;
+    padding:30px 20px;
+}
 
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
 @media(max-width:750px){
 
     .navbar{
-
         flex-direction:column;
-
         gap:20px;
-
         padding:20px;
     }
 
     .nav-links{
-
         flex-wrap:wrap;
-
         justify-content:center;
-
         gap:13px;
     }
 
-    .payment-section{
-
-        padding:55px 15px;
-    }
-
     .payment-card{
-
-        padding:27px 20px;
-
-        border-radius:20px;
+        padding:25px 20px;
     }
 
-    .payment-title h1{
-
-        font-size:40px;
-    }
-
-    .detail-row{
-
-        flex-direction:column;
-
-        gap:5px;
-    }
-
-    .detail-value{
-
-        text-align:left;
+    .title h1{
+        font-size:38px;
     }
 
 }
@@ -582,18 +266,12 @@ footer p{
 
 </head>
 
-
 <body>
 
-
-<!-- =========================
-     HEADER
-========================= -->
 
 <header>
 
 <nav class="navbar">
-
 
 <a href="index.html" class="logo">
 
@@ -601,19 +279,11 @@ footer p{
 D
 </div>
 
-<div class="logo-text">
+<div>
 
-<span class="dst">
-DST
-</span>
-
-<span class="rawana">
-RAWANA
-</span>
-
-<span class="lanka">
-LANKA
-</span>
+<span class="dst">DST</span>
+<span class="rawana">RAWANA</span>
+<span class="lanka">LANKA</span>
 
 </div>
 
@@ -623,40 +293,24 @@ LANKA
 <ul class="nav-links">
 
 <li>
-<a href="index.html">
-Home
-</a>
+<a href="index.html">Home</a>
 </li>
 
 <li>
-<a href="products.html">
-Products
-</a>
+<a href="products.html">Products</a>
 </li>
 
 <li>
-<a href="about.html">
-About
-</a>
+<a href="about.html">About</a>
 </li>
 
 <li>
-<a href="order.html">
-Order
-</a>
+<a href="order.html">Order</a>
 </li>
 
 <li>
-<a
-href="cart.html"
-class="cart-button">
-
+<a href="cart.html" class="cart-button">
 🛒 Cart
-
-<span id="cartCount">
-0
-</span>
-
 </a>
 </li>
 
@@ -668,18 +322,14 @@ class="cart-button">
 
 
 
-<!-- =========================
-     PAYMENT
-========================= -->
-
 <section class="payment-section">
 
-<div class="payment-container">
+<div class="container">
 
 
-<div class="payment-title">
+<div class="title">
 
-<div class="payment-label">
+<div class="label">
 DST RAWANA LANKA
 </div>
 
@@ -688,7 +338,7 @@ Online Payment
 </h1>
 
 <p>
-Review your order before continuing
+Secure payment for your order
 </p>
 
 </div>
@@ -698,93 +348,95 @@ Review your order before continuing
 <div class="payment-card">
 
 
-<!-- ORDER SUMMARY -->
+<div class="order-summary">
 
-<h2 class="summary-title">
+<h3>
 🛒 Order Summary
-</h2>
-
-
-<div
-class="order-details"
-id="orderDetails">
-
-<p>
-Loading order details...
-</p>
-
-</div>
-
-
-
-<!-- PAYMENT METHOD -->
-
-<div class="payment-method">
-
-<h3>
-💳 Secure Online Payment
 </h3>
 
-<p>
+<div class="summary-row">
 
-Your order is ready for online
-payment. A payment gateway such
-as PayHere can be connected here
-once the merchant account is set up.
+<span>
+Order ID
+</span>
 
-</p>
+<strong id="orderId">
+Loading...
+</strong>
+
+</div>
+
+<div class="summary-row">
+
+<span>
+Customer
+</span>
+
+<strong id="customerName">
+Loading...
+</strong>
+
+</div>
+
+<div class="summary-row">
+
+<span>
+Product
+</span>
+
+<strong id="productName">
+Loading...
+</strong>
+
+</div>
+
+<div class="summary-row">
+
+<span>
+Quantity
+</span>
+
+<strong id="quantity">
+Loading...
+</strong>
+
+</div>
+
+<div class="summary-row total">
+
+<span>
+Total
+</span>
+
+<span id="amount">
+Rs. 0.00
+</span>
+
+</div>
 
 </div>
 
 
-
-<!-- SECURITY -->
-
-<div class="security-box">
-
-<div class="security-icon">
-🔒
-</div>
-
-<div class="security-text">
-
-<h3>
-Payment Security
-</h3>
-
-<p>
-
-Never enter your card number,
-CVV, PIN or password into this
-website unless you are on the
-official payment gateway page.
-
-</p>
-
-</div>
-
-</div>
-
-
-
-<!-- PAYMENT BUTTON -->
 
 <button
-class="payment-btn"
+class="pay-button"
 onclick="startPayment()">
 
-💳 Continue to Secure Payment
+💳 Continue to PayHere
 
 </button>
 
 
-<a
-href="order.html"
-class="back-btn">
 
-← Back to Order
+<div class="note">
 
-</a>
+<strong>Sandbox Mode</strong><br>
+
+This payment is for testing only.
+No real money will be charged while
+using the PayHere Sandbox.
+
+</div>
 
 
 </div>
@@ -795,233 +447,176 @@ class="back-btn">
 
 
 
-<!-- =========================
-     FOOTER
-========================= -->
-
 <footer>
 
-<div class="footer-title">
-DST RAWANA LANKA
-</div>
-
-<p>
-Fresh, delicious and quality products made for you.
-</p>
-
-<div class="copyright">
-
-© 2026 DST RAWANA LANKA.
-All Rights Reserved.
-
-</div>
+© 2026 DST RAWANA LANKA. All Rights Reserved.
 
 </footer>
 
 
 
-<!-- =========================
-     JAVASCRIPT
-========================= -->
-
 <script>
 
+/* GET ORDER DATA */
 
-/* =========================
-   LOAD ORDER
-========================= */
-
-const pendingOrder =
-JSON.parse(
-    localStorage.getItem(
-        "pendingOrder"
-    )
+const params =
+new URLSearchParams(
+window.location.search
 );
 
 
-/* =========================
-   SHOW ORDER
-========================= */
+const orderId =
+params.get("order_id") ||
+("DST-" + Date.now());
 
-const orderDetails =
+
+const customerName =
+params.get("name") ||
+"Test Customer";
+
+
+const productName =
+params.get("product") ||
+"Test Product";
+
+
+const quantity =
+Number(
+params.get("quantity")
+) || 1;
+
+
+const amount =
+Number(
+params.get("amount")
+) || 100;
+
+
 document.getElementById(
-    "orderDetails"
-);
+"orderId"
+).innerText =
+orderId;
 
 
-if(pendingOrder){
-
-    orderDetails.innerHTML = `
-
-        <div class="detail-row">
-
-            <span class="detail-label">
-                👤 Customer
-            </span>
-
-            <span class="detail-value">
-                ${escapeHTML(pendingOrder.name)}
-            </span>
-
-        </div>
+document.getElementById(
+"customerName"
+).innerText =
+customerName;
 
 
-        <div class="detail-row">
-
-            <span class="detail-label">
-                📞 Phone
-            </span>
-
-            <span class="detail-value">
-                ${escapeHTML(pendingOrder.phone)}
-            </span>
-
-        </div>
+document.getElementById(
+"productName"
+).innerText =
+productName;
 
 
-        <div class="detail-row">
-
-            <span class="detail-label">
-                📦 Product
-            </span>
-
-            <span class="detail-value">
-                ${escapeHTML(pendingOrder.product)}
-            </span>
-
-        </div>
+document.getElementById(
+"quantity"
+).innerText =
+quantity;
 
 
-        <div class="detail-row">
-
-            <span class="detail-label">
-                🔢 Quantity
-            </span>
-
-            <span class="detail-value">
-                ${escapeHTML(pendingOrder.quantity)}
-            </span>
-
-        </div>
+document.getElementById(
+"amount"
+).innerText =
+"Rs. " + amount.toFixed(2);
 
 
-        <div class="detail-row">
+/* START PAYMENT */
 
-            <span class="detail-label">
-                📍 Delivery Address
-            </span>
+async function startPayment(){
 
-            <span class="detail-value">
-                ${escapeHTML(pendingOrder.address)}
-            </span>
-
-        </div>
-
-
-        <div class="detail-row">
-
-            <span class="detail-label">
-                💳 Payment
-            </span>
-
-            <span class="detail-value">
-                Online Payment
-            </span>
-
-        </div>
-
-    `;
-
-}
-
-else{
-
-    orderDetails.innerHTML = `
-
-        <p>
-        No pending order was found.
-        Please return to the order page
-        and place your order first.
-        </p>
-
-    `;
-
-}
-
-
-/* =========================
-   SAFE TEXT
-========================= */
-
-function escapeHTML(value){
-
-    return String(value ?? "")
-    .replace(/&/g,"&amp;")
-    .replace(/</g,"&lt;")
-    .replace(/>/g,"&gt;")
-    .replace(/"/g,"&quot;")
-    .replace(/'/g,"&#039;");
-
-}
-
-
-/* =========================
-   PAYMENT
-========================= */
-
-function startPayment(){
-
-    alert(
-        "Online payment gateway is not connected yet. Please connect your payment gateway account before accepting online payments."
+    const button =
+    document.querySelector(
+        ".pay-button"
     );
 
-}
+    button.disabled = true;
+
+    button.innerText =
+    "Connecting to PayHere...";
 
 
-/* =========================
-   CART COUNT
-========================= */
+    try{
 
-function updateCartCount(){
+        const response =
+        await fetch(
+            "/api/payhere/create-payment",
+            {
+                method:"POST",
 
-    let cart =
-    JSON.parse(
-        localStorage.getItem("cart")
-    ) || [];
+                headers:{
+                    "Content-Type":
+                    "application/json"
+                },
+
+                body:JSON.stringify({
+
+                    order_id:
+                    orderId,
+
+                    name:
+                    customerName,
+
+                    product:
+                    productName,
+
+                    quantity:
+                    quantity,
+
+                    amount:
+                    amount
+
+                })
+
+            }
+        );
 
 
-    let count = 0;
+        if(!response.ok){
 
-
-    cart.forEach(
-        item => {
-
-            count +=
-            Number(
-                item.quantity
-            ) || 0;
+            throw new Error(
+                "Payment server error"
+            );
 
         }
-    );
 
 
-    const cartCount =
-    document.getElementById(
-        "cartCount"
-    );
+        const data =
+        await response.json();
 
 
-    if(cartCount){
+        if(!data.payment_url){
 
-        cartCount.innerText =
-        count;
+            throw new Error(
+                "Payment URL not received"
+            );
+
+        }
+
+
+        window.location.href =
+        data.payment_url;
+
+
+    }
+    catch(error){
+
+        console.error(error);
+
+        alert(
+            "Unable to connect to PayHere Sandbox. Please check the payment server."
+        );
+
+
+        button.disabled = false;
+
+        button.innerText =
+        "💳 Continue to PayHere";
 
     }
 
 }
-
-
-updateCartCount();
 
 </script>
 

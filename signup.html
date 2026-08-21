@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Sign Up | DST RAWANA LANKA</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    background:
+    linear-gradient(
+        rgba(63,36,21,0.65),
+        rgba(63,36,21,0.65)
+    ),
+    url("images/hero.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+
+.signup-box{
+
+    width:420px;
+
+    max-width:90%;
+
+    background:#ffffff;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    box-shadow:
+    0 20px 60px rgba(0,0,0,0.25);
+
+}
+
+
+.logo{
+
+    text-align:center;
+
+    margin-bottom:10px;
+
+    font-family:Georgia,serif;
+
+    font-size:30px;
+
+    font-weight:900;
+
+    color:#4b2a18;
+
+}
+
+
+.subtitle{
+
+    text-align:center;
+
+    color:#927c6b;
+
+    margin-bottom:30px;
+
+}
+
+
+label{
+
+    display:block;
+
+    margin-bottom:7px;
+
+    color:#4b2a18;
+
+    font-weight:700;
+
+}
+
+
+input{
+
+    width:100%;
+
+    padding:14px;
+
+    border:1px solid #dfcdbb;
+
+    border-radius:12px;
+
+    outline:none;
+
+    font-size:15px;
+
+    margin-bottom:18px;
+
+}
+
+
+input:focus{
+
+    border-color:#a66b2f;
+
+    box-shadow:
+    0 0 0 3px rgba(166,107,47,0.12);
+
+}
+
+
+.signup-btn{
+
+    width:100%;
+
+    border:none;
+
+    padding:15px;
+
+    border-radius:25px;
+
+    background:#4b2a18;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:800;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+}
+
+
+.signup-btn:hover{
+
+    background:#2f190d;
+
+    transform:translateY(-2px);
+
+}
+
+
+.signup-btn:disabled{
+
+    opacity:0.6;
+
+    cursor:not-allowed;
+
+    transform:none;
+
+}
+
+
+.message{
+
+    text-align:center;
+
+    margin-top:18px;
+
+    font-size:14px;
+
+    min-height:20px;
+
+}
+
+
+.login-link{
+
+    text-align:center;
+
+    margin-top:25px;
+
+    color:#705b4b;
+
+}
+
+
+.login-link a{
+
+    color:#a66b2f;
+
+    font-weight:800;
+
+    text-decoration:none;
+
+}
+
+
+.back-home{
+
+    display:block;
+
+    text-align:center;
+
+    margin-top:18px;
+
+    color:#927c6b;
+
+    text-decoration:none;
+
+    font-size:14px;
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="signup-box">
+
+
+<div class="logo">
+
+DST RAWANA LANKA
+
+</div>
+
+
+<div class="subtitle">
+
+Create your account
+
+</div>
+
+
+<form id="signupForm">
+
+
+<label for="email">
+Email Address
+</label>
+
+<input
+type="email"
+id="email"
+placeholder="Enter your email"
+required
+>
+
+
+<label for="password">
+Password
+</label>
+
+<input
+type="password"
+id="password"
+placeholder="Enter password"
+required
+>
+
+
+<label for="confirmPassword">
+Confirm Password
+</label>
+
+<input
+type="password"
+id="confirmPassword"
+placeholder="Confirm password"
+required
+>
+
+
+<button
+type="submit"
+class="signup-btn"
+id="signupBtn">
+
+✨ Create Account
+
+</button>
+
+
+</form>
+
+
+<div
+class="message"
+id="message">
+</div>
+
+
+<div class="login-link">
+
+Already have an account?
+
+<a href="login.html">
+Login
+</a>
+
+</div>
+
+
+<a
+href="index.html"
+class="back-home">
+
+← Back to Home
+
+</a>
+
+
+</div>
+
+
+<script type="module">
+
+import {
+
+    auth,
+
+    createUserWithEmailAndPassword
+
+} from "./js/auth.js";
+
+
+const form =
+document.getElementById(
+    "signupForm"
+);
+
+
+const emailInput =
+document.getElementById(
+    "email"
+);
+
+
+const passwordInput =
+document.getElementById(
+    "password"
+);
+
+
+const confirmPasswordInput =
+document.getElementById(
+    "confirmPassword"
+);
+
+
+const message =
+document.getElementById(
+    "message"
+);
+
+
+const signupBtn =
+document.getElementById(
+    "signupBtn"
+);
+
+
+form.addEventListener(
+    "submit",
+    async function(event){
+
+        event.preventDefault();
+
+
+        const email =
+        emailInput.value.trim();
+
+
+        const password =
+        passwordInput.value;
+
+
+        const confirmPassword =
+        confirmPasswordInput.value;
+
+
+        message.innerText = "";
+        message.style.color = "#4b2a18";
+
+
+        if(password !== confirmPassword){
+
+            message.innerText =
+            "❌ Passwords do not match.";
+
+            message.style.color = "#c0392b";
+
+            return;
+
+        }
+
+
+        if(password.length < 6){
+
+            message.innerText =
+            "❌ Password must be at least 6 characters.";
+
+            message.style.color = "#c0392b";
+
+            return;
+
+        }
+
+
+        signupBtn.disabled = true;
+
+        signupBtn.innerText =
+        "Creating Account...";
+
+
+        try{
+
+            await createUserWithEmailAndPassword(
+                auth,
+                email,
+                password
+            );
+
+
+            message.innerText =
+            "✅ Account created successfully!";
+
+
+            message.style.color =
+            "#287a3d";
+
+
+            setTimeout(function(){
+
+                window.location.href =
+                "index.html";
+
+            },1500);
+
+
+        }
+
+        catch(error){
+
+            console.error(error);
+
+
+            let errorMessage =
+            "❌ Something went wrong.";
+
+
+            if(
+                error.code ===
+                "auth/email-already-in-use"
+            ){
+
+                errorMessage =
+                "❌ This email is already registered.";
+
+            }
+
+            else if(
+                error.code ===
+                "auth/invalid-email"
+            ){
+
+                errorMessage =
+                "❌ Please enter a valid email.";
+
+            }
+
+            else if(
+                error.code ===
+                "auth/weak-password"
+            ){
+
+                errorMessage =
+                "❌ Password is too weak.";
+
+            }
+
+
+            message.innerText =
+            errorMessage;
+
+
+            message.style.color =
+            "#c0392b";
+
+
+            signupBtn.disabled = false;
+
+            signupBtn.innerText =
+            "✨ Create Account";
+
+        }
+
+    }
+);
+
+</script>
+
+
+</body>
+
+</html>
