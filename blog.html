@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Blog | DST RAWANA LANKA</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#fffaf3;
+    color:#4b2a18;
+}
+
+header{
+    background:#fff;
+    padding:20px;
+    box-shadow:0 3px 15px rgba(75,42,24,.1);
+}
+
+.navbar{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.logo{
+    text-decoration:none;
+    font-size:22px;
+    font-weight:900;
+    color:#4b2a18;
+}
+
+.logo span{
+    color:#a66b2f;
+}
+
+nav{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+nav a{
+    text-decoration:none;
+    color:#4b2a18;
+    font-weight:700;
+}
+
+.container{
+    max-width:1100px;
+    margin:60px auto;
+    padding:20px;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.title small{
+    color:#a66b2f;
+    font-weight:900;
+    letter-spacing:4px;
+}
+
+.title h1{
+    font-family:Georgia,serif;
+    font-size:48px;
+    margin-top:10px;
+}
+
+.blog-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.blog-card{
+    background:#fff;
+    border:1px solid #eedfce;
+    border-radius:22px;
+    overflow:hidden;
+    box-shadow:0 12px 30px rgba(75,42,24,.08);
+}
+
+.blog-image{
+    height:180px;
+    background:#f3e5d4;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:60px;
+}
+
+.blog-content{
+    padding:25px;
+}
+
+.blog-content h2{
+    font-family:Georgia,serif;
+    margin-bottom:12px;
+}
+
+.blog-content p{
+    color:#705b4b;
+    line-height:1.7;
+}
+
+.read-more{
+    display:inline-block;
+    margin-top:15px;
+    color:#a66b2f;
+    font-weight:800;
+    text-decoration:none;
+}
+
+footer{
+    margin-top:60px;
+    background:#29160d;
+    color:#cbb8a7;
+    text-align:center;
+    padding:30px 20px;
+}
+
+@media(max-width:850px){
+
+    .navbar{
+        flex-direction:column;
+    }
+
+    .blog-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+}
+
+@media(max-width:550px){
+
+    .blog-grid{
+        grid-template-columns:1fr;
+    }
+
+    .title h1{
+        font-size:38px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="navbar">
+
+<a href="index.html" class="logo">
+DST <span>RAWANA</span> LANKA
+</a>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="index.html#products">Products</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+</div>
+
+</header>
+
+<main class="container">
+
+<div class="title">
+
+<small>DST RAWANA LANKA</small>
+
+<h1>Our Blog</h1>
+
+</div>
+
+<div class="blog-grid">
+
+<article class="blog-card">
+
+<div class="blog-image">
+🥛
+</div>
+
+<div class="blog-content">
+
+<h2>Why Yoghurt Is a Popular Dairy Product</h2>
+
+<p>
+Yoghurt is enjoyed by many people as part of their everyday meals and snacks. Learn more about yoghurt and how it can fit into a balanced diet.
+</p>
+
+<a href="#" class="read-more">
+Read More →
+</a>
+
+</div>
+
+</article>
+
+
+<article class="blog-card">
+
+<div class="blog-image">
+🍹
+</div>
+
+<div class="blog-content">
+
+<h2>Refreshing Fruit Drinks</h2>
+
+<p>
+Fruit drinks are a popular choice for a refreshing beverage. Discover different flavours and ideas for enjoying fruit drinks.
+</p>
+
+<a href="#" class="read-more">
+Read More →
+</a>
+
+</div>
+
+</article>
+
+
+<article class="blog-card">
+
+<div class="blog-image">
+🧈
+</div>
+
+<div class="blog-content">
+
+<h2>Understanding Dairy Products</h2>
+
+<p>
+From butter and ghee to yoghurt and dairy drinks, learn about some of the products commonly enjoyed in Sri Lankan households.
+</p>
+
+<a href="#" class="read-more">
+Read More →
+</a>
+
+</div>
+
+</article>
+
+
+<article class="blog-card">
+
+<div class="blog-image">
+❄️
+</div>
+
+<div class="blog-content">
+
+<h2>How to Store Chilled Dairy Products</h2>
+
+<p>
+Proper storage is important for chilled food products. Always follow the storage instructions shown on the product packaging.
+</p>
+
+<a href="#" class="read-more">
+Read More →
+</a>
+
+</div>
+
+</article>
+
+
+<article class="blog-card">
+
+<div class="blog-image">
+🥭
+</div>
+
+<div class="blog-content">
+
+<h2>Exploring Fruit Flavours</h2>
+
+<p>
+Mango, passion fruit, lime and mixed fruit are some of the flavours enjoyed in refreshing beverages.
+</p>
+
+<a href="#" class="read-more">
+Read More →
+</a>
+
+</div>
+
+</article>
+
+
+<article class="blog-card">
+
+<div class="blog-image">
+🇱🇰
+</div>
+
+<div class="blog-content">
+
+<h2>Food and Beverage Culture in Sri Lanka</h2>
+
+<p>
+Sri Lanka has a diverse food and beverage culture. Explore some of the flavours and products enjoyed around the country.
+</p>
+
+<a href="#" class="read-more">
+Read More →
+</a>
+
+</div>
+
+</article>
+
+</div>
+
+</main>
+
+<footer>
+
+© 2026 DST RAWANA LANKA. All Rights Reserved.
+
+</footer>
+
+</body>
+</html>
